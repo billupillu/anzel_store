@@ -86,7 +86,7 @@
 # end
 
 #--------------------------------------------
-spree.config do |config|
+Spree.config do |config|
   attachment_config={
   s3_credentials: {
   access_key_id: ENV['AWS_ACCESS_KEY_ID'],
@@ -109,7 +109,7 @@ spree.config do |config|
   default_style: "product",
   }
   attachment_config.each do |key,value|
-  Spree::Image.attachment_defnitions[:attachment][key.to_sym]=value
+  Spree::Image.attachment_definitions[:attachment][key.to_sym]=value
   end
 end
 
