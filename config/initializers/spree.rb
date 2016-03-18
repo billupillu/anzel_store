@@ -50,39 +50,67 @@
 
 
 #--------------------------------------
-Spree.config do |config|
-   # Example:
-   # Uncomment to override the default site name.
-  #  config.site_name = "Gazella Running Costumes"
-  #  config.logo = "store/rungazella.png"
+# Spree.config do |config|
+#    # Example:
+#    # Uncomment to override the default site name.
+#   #  config.site_name = "Gazella Running Costumes"
+#   #  config.logo = "store/rungazella.png"
 
-  #S3 configuration
-  if Rails.env.production? then
-       #production. Store images on S3.
-       # development will default to local storage
-      attachment_config = {
-      s3_credentials: {
-        access_key_id: "AKIAJNKSQPCJ6QPMPAUQ",
-        secret_access_key: "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",
-        bucket: "anzelstore",
-      },
+#   #S3 configuration
+#   if Rails.env.production? then
+#        #production. Store images on S3.
+#        # development will default to local storage
+#       attachment_config = {
+#       s3_credentials: {
+#         access_key_id: "AKIAJNKSQPCJ6QPMPAUQ",
+#         secret_access_key: "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",
+#         bucket: "anzelstore",
+#       },
 
 
-      storage:        :s3,
-      s3_headers:     { "Cache-Control" => "max-age=31557600" },
-      s3_protocol:    "https",
-      bucket:         "anzelstore",
+#       storage:        :s3,
+#       s3_headers:     { "Cache-Control" => "max-age=31557600" },
+#       s3_protocol:    "https",
+#       bucket:         "anzelstore",
 
-      #path:          ":rails_root/public/:class/:attachment/:id/:style/:basename.:extension",
-      default_url:   "/:class/:attachment/:id/:style/:basename.:extension",
-      default_style: "product",
-      }
+      
+#       default_url:   "/:class/:attachment/:id/:style/:basename.:extension",
+#       default_style: "product",
+#       }
 
-      attachment_config.each do |key, value|
-           Spree::Image.attachment_definitions[:attachment][key.to_sym] = value
-      end
+#       attachment_config.each do |key, value|
+#            Spree::Image.attachment_definitions[:attachment][key.to_sym] = value
+#       end
+#   end
+# Spree.user_class = "Spree::User"
+# end
+
+#--------------------------------------------
+spree.config do |config|
+  attachment_config={
+  s3_credentials: {
+  access_key_id: ENV['AWS_ACCESS_KEY_ID'],
+  secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
+  bucket: ENV['ENV_BUCKET_NAME']
+  },
+  storage:     :s3,
+  s3_headers:  {"Cache-Control"=>"max-age=31557600"},
+  s3_protocol: "https",
+  bucket:      ENV['S3_BUCKET_NAME'],
+  url:         "url",
+  styles:      {
+                 mini:   "48x48>",
+                 small:  "100x100>",
+                 product:"240x240>",
+                 large:  "600x600>"
+               },
+  path:        "/spree/:class/:id/:style/:basename.:extension",
+  default_url: "/spree/products/:id/:style/:basename.:extension",
+  default_style: "product",
+  }
+  attachment_config.each do |key,value|
+  Spree::Image.attachment_defnitions[:attachment][key.to_sym]=value
   end
-Spree.user_class = "Spree::User"
 end
 
 
