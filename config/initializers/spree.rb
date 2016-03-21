@@ -28,8 +28,7 @@ Spree.config do |config|
   end
 end
 
-# https://s3-us-west-2.amazonaws.com/anzelstore/spree/spree/images/10/large/Abstract_1_on_canvas__28x_31_inches__acrylic_on_canvas__11538_-_Copy.JPG
-# https://s3.amazonaws.com/anzelstore/spree/spree/images/10/mini/Abstract_1_on_canvas__28x_31_inches__acrylic_on_canvas__11538_-_Copy.JPG?1458365970
+
 
     
 
