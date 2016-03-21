@@ -1,4 +1,21 @@
 GIT
+  remote: git://github.com/spree-contrib/spree_email_to_friend.git
+  revision: bada2e955ed63704867a186d3dd0e469ff8b8004
+  branch: 3-0-stable
+  specs:
+    spree_email_to_friend (1.3.0)
+      recaptcha (>= 0.3.1)
+      spree_core (~> 3.0.0.rc2)
+
+GIT
+  remote: git://github.com/spree-contrib/spree_wishlist.git
+  revision: 07520b0a69a4f27e829810ca76cfd2a801ef5571
+  branch: 3-0-stable
+  specs:
+    spree_wishlist (2.2.0)
+      spree_core (~> 3.0.0)
+
+GIT
   remote: git://github.com/spree/spree_auth_devise.git
   revision: 145a06354a39a7ceeea4ad93e39c63c1ecb13c52
   branch: 3-0-stable
@@ -224,6 +241,8 @@ GEM
       polyamorous (~> 1.1)
     rdoc (4.2.2)
       json (~> 1.4)
+    recaptcha (1.1.0)
+      json
     responders (2.1.1)
       railties (>= 4.2.0, < 5.1)
     sass (3.4.21)
@@ -357,7 +376,9 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   spree (= 3.0.4)
   spree_auth_devise!
+  spree_email_to_friend!
   spree_gateway!
+  spree_wishlist!
   spring
   sqlite3
   turbolinks

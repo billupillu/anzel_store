@@ -1,15 +1,48 @@
-<div id="spree-header">
-  <header id="header" data-hook>
-    <div class="container">
-      <div class="row">
-        <figure id="logo" class="col-md-4" data-hook>
-          <%= logo %>
-        </figure>
-        <%= render :partial => 'spree/shared/nav_bar' %>
-      </div>
-    </div>
-  </header>
-  <div class="container">
+<!--granda--><style type="text/css">.header4 .search-form input{width: 240px;} select.form-control{appearance:none;
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */ }</style>
+
+<div class="container header-inside" data-hook>
+                <div class="row">
+                    <div class="col-sm-12 clearfix">
+                        <div class="logo-container" >
+                            <h1 class="logo clearfix" data-hook>
+                                <a href="<%=spree.root_path%>" title="Art Anzels Premium Paintings Online"> <%=image_tag 'logo.png'%></a>
+                            </h1>
+                        </div><!-- End .logo-container-->
+
+                        <% @taxons = @taxon && @taxon.parent ? @taxon.parent.children : Spree::Taxon.roots %> 
+                        <div class="right-side clearfix">
+                            <div class="cart-dropdown dropdown pull-right">
+                                
+                                <%= form_tag spree.products_path, :method => :get, class: "search-form" do %>
+                                    
+                                    <%= search_field_tag :keywords, params[:keywords], :placeholder => "Search", class: "s" %>
+                                    
+                                    <%= submit_tag Spree.t(:search), :name => nil, class: "search-submit-btn" %> 
+                                </form>
+                                
+                            </div><!-- End .cart-dropdown -->
+                            <div class="search-container">
+                                  <% cache(cache_key_for_taxons) do %>
+                                     <%= select_tag :taxon, options_for_select([[Spree.t(:all_departments), '']] + @taxons.map {|t| [t.name, t.id]},
+                                     @taxon ? @taxon.id : params[:taxon]), 'aria-label' => 'Taxon', class: "form-control" %>
+                                  <% end %>
+                            </div><!-- End .search-container -->
+                                <% end %>
+
+                        </div><!-- End .right-side -->
+                    </div><!-- End .col-sm-12 -->
+                </div><!-- End .row -->
+</div><!-- End .container -->
+<div class="container">
     <%= render :partial => 'spree/shared/main_nav_bar' if store_menu? %>
-  </div>
 </div>
+
+
+
+
+  
+  
+  
+ 
