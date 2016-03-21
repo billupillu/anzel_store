@@ -1,0 +1,74 @@
+
+			<div id="header-top">
+                <div class="container clearfix">
+                    <div class="left-side">
+                        <ul class="header-links">
+                            <li><a href="/account"><span style="background-image:url(<%=asset_path 'sprites/sprite.png'%>);" class="header-links-icon icon-account"></span><span>My Account</span></a></li>
+                            <li><a href="checkout.html"><span style="background-image:url(<%=asset_path 'sprites/sprite.png'%>);" class="header-links-icon icon-checkout"></span><span>Checkout</span></a></li>
+                            
+                            <li><a href="login.html"><span style="background-image:url(<%=asset_path 'sprites/sprite.png'%>);" class="header-links-icon icon-fav"></span><span>My Wishlist</span></a></li>
+                        </ul>
+
+                        <div class="user-dropdown dropdown visible-sm visible-xs">
+                            <a title="My Account" class="dropdown-toggle" data-toggle="dropdown"><span class="header-links-icon icon-account"></span><span style="background-image:url(<%=asset_path 'sprites/sprite.png'%>);"  class="hidden-xs">My Account</span><span style="background-image:url(<%=asset_path 'sprites/sprite.png'%>);"  class="dropdown-arrow"></span></a>
+
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/account"><span class="header-links-icon icon-account"></span><span>My Account</span></a></li>
+                                <li><a href="checkout.html"><span class="header-links-icon icon-checkout"></span><span>Checkout</span></a></li>
+                                <li><a href="login.html"><span style="background-image:url(<%=asset_path 'sprites/sprite.png'%>);" class="header-links-icon icon-fav"></span><span>My Wishlist</span></a></li>
+                                <li><a href="<%=spree.login_path%>"><span style="background-image:url(<%=asset_path 'sprites/sprite.png'%>);" class="header-links-icon icon-login"></span><span>Login</span></a></li>
+                            </ul>
+                        </div><!-- End .user-dropdown -->
+                    </div><!-- End .left-side -->
+                    <div class="right-side">
+
+                        <div class="currency-dropdown dropdown">
+                            <a title="Currenct" class="dropdown-toggle" data-toggle="dropdown"><span class="long-name">INR</span><span class="short-name">INR</span><span style="background-image:url(<%=asset_path 'sprites/sprite.png'%>);" class="dropdown-arrow"></span></a>
+
+                           <!--  <ul class="dropdown-menu">
+                                <li><a href="#"><span class="long-name">US Dollar</span><span class="short-name">INR</span></a></li>
+                                <li><a href="#"><span class="long-name">Euro</span><span class="short-name">EUR</span></a></li>
+                                <li><a href="#"><span class="long-name">Pound St.</span><span class="short-name">GBT</span></a></li>
+                            </ul> -->
+                        </div><!-- End .currency-dropdown -->
+
+                        <div class="language-dropdown dropdown">
+                            <a title="Language" class="dropdown-toggle" data-toggle="dropdown"><span class="long-name">English</span><span class="short-name">Eng</span><span style="background-image:url(<%=asset_path 'sprites/sprite.png'%>);" class="dropdown-arrow"></span></a>
+
+                         <!--    <ul class="dropdown-menu">
+                                <li><a href="#"><span class="long-name">English</span><span class="short-name">Eng</span></a></li>
+                                <li><a href="#"><span class="long-name">Spanish</span><span class="short-name">Spa</span></a></li>
+                                <li><a href="#"><span class="long-name">French</span><span class="short-name">Fre</span></a></li>
+                                <li><a href="#"><span class="long-name">German</span><span class="short-name">Ger</span></a></li>
+                                <li><a href="#"><span class="long-name">Italian</span><span class="short-name">Ita</span></a></li>
+                            </ul> -->
+                        </div><!-- End .currency-dropdown -->
+
+                        <ul class="header-link">
+                            <% if spree_current_user %>
+                              <li>
+                                   <%=link_to spree.logout_path, title: "Logout" do%> 
+                                
+                                        <!-- <span style="background-image:url(<%=asset_path 'sprites/sprite.png'%>);" class="header-links-icon icon-logout"></span> -->
+
+                                        <span class="hidden-xs">Logout</span>
+
+                                    <%end%>
+                                </li>
+                            
+
+                            <%else%>
+
+                              <li><a href="<%=spree.login_path%>" title="Login">
+                                    <span style="background-image:url(<%=asset_path 'sprites/sprite.png'%>);" class="header-links-icon icon-login"></span>
+                                    <span class="hidden-xs">Login</span>
+                                </a> <span class="hidden-xs">/</span>
+                                <a href="<%=spree.signup_path%>" title="Register" class="hidden-xs">Register</a>
+                            </li>
+
+                            <%end%>
+                        </ul>
+                    </div><!-- End .right-side -->
+                </div>
+            </div><!-- End #header-top -->
+
