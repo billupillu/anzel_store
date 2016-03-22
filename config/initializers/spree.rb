@@ -31,7 +31,7 @@ Spree.config do |config|
   end
 end
 
-# Spree::Config[:attachment_styles] = {mini: '50x50>', small: '180x180>', product: '270x340>', large: '670x844>'}.to_json
+
 
     
 

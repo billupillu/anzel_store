@@ -1,9 +1,6 @@
-<nav class="col-md-12">
-  <div id="main-nav-bar" class="navbar">
-    <ul class="nav navbar-nav" data-hook>
-      <li id="home-link" data-hook><%= link_to Spree.t(:home), spree.root_path %></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right" data-hook>
+
+
+ <ul class="hide" data-hook>
       <li id="link-to-cart" data-hook>
         <noscript>
           <%= link_to Spree.t(:cart), '/cart' %>
@@ -12,5 +9,145 @@
       </li>
       <script>Spree.fetch_cart()</script>
     </ul>
-  </div>
-</nav>
+
+          <!--darbaar code-->
+
+<div class="container nav-wrapper" data-clone="sticky">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <a href="#" class="header-search-btn visible-xs" title="Search"></a>
+                        <nav id="main-nav" role="navigation">
+                            <div id="responsive-nav">
+                                <a id="responsive-btn" href="#">
+                                    <span class="responsive-btn-icon">
+                                        <span class="responsive-btn-block"></span>
+                                        <span class="responsive-btn-block"></span>
+                                        <span class="responsive-btn-block last"></span>
+                                    </span>
+                                    <span class="responsive-btn-text">Menu</span>
+                                </a><!-- responsive-nav-button -->
+                                <div id="responsive-menu-container">
+                                    
+                                </div><!-- End #responsive-menu-container -->
+                            </div><!-- End .responsive-nav -->
+                            
+                            <ul class="menu clearfix">
+                                <li><a href="<%=spree.root_path%>">Home</a>
+                                    <ul>
+                                        <li><a href="index.html">Home 1</a></li>
+                                        <li><a href="index2.html">Home 2</a></li>
+                                        <li><a href="index3.html">Home 3</a></li>
+                                        <li><a href="index4.html">Home 4</a></li>
+                                        <li><a href="index5.html">Home 5</a></li>
+                                        <li><a href="index6.html">Home 6</a></li>
+                                        <li><a href="index7.html">Home 7</a></li>
+                                    </ul>
+                                </li>
+                                
+                                <li class="megamenu-container"><a href="#">Features</a>
+                                    <div class="megamenu">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-md-2">
+                                                    <a href="#" class="megamenu-title">Portfolio</a>
+                                                    <ul>
+                                                        <li><a href="portfolio-4.html">Classic Column 4</a></li>
+                                                        <li><a href="portfolio-3.html">Classic Column 3</a></li>
+                                                        <li><a href="portfolio-2.html">Classic Column 2</a></li>
+                                                        <li><a href="portfolio-masonry-4.html">Masonry Column 4</a></li>
+                                                        <li><a href="portfolio-masonry-3.html">Masonry Column 3</a></li>
+                                                        <li><a href="portfolio-masonry-2.html">Masonry Column 2</a></li>
+                                                        
+                                                    </ul>
+                                                </div><!-- End .col-md-2 -->
+                                                <div class="col-md-2">
+                                                    <a href="#" class="megamenu-title">Portfolio</a>
+                                                    <ul>
+                                                        <li><a href="portfolio-grid.html">Grid Style</a></li>
+                                                        <li><a href="single-portfolio.html">Single Portfolio</a></li>
+                                                        <li><a href="single-portfolio-2.html">Single Portfolio 2</a></li>
+                                                        
+                                                    </ul>
+                                                </div><!-- End .col-md-2 -->
+                                                <div class="col-md-2">
+                                                    <a href="#" class="megamenu-title">Elements</a>
+                                                    <ul>
+                                                        <li><a href="typography.html">Typography</a></li>
+                                                        <li><a href="tabs.html">Tabs</a></li>
+                                                        <li><a href="collapses.html">Collapses</a></li>
+                                                        <li><a href="forms.html">Form Elements</a></li>
+                                                        <li><a href="buttons.html">Buttons</a></li>
+                                                        <li><a href="grids.html">Grid System</a></li>
+                                                    </ul>
+                                                </div><!-- End .col-md-2 -->
+                                                <div class="col-md-2">
+                                                    <a href="#" class="megamenu-title">Elements</a>
+                                                    <ul>
+                                                        <li><a href="media.html">Media</a></li>
+                                                        <li><a href="icons.html">Icons</a></li>
+                                                        <li><a href="animations.html">Animations</a></li>
+                                                        <li><a href="more.html">More</a></li>
+                                                    </ul>
+                                                </div><!-- End .col-md-2 -->
+
+                                                <div class="col-md-4 menu-banner">
+                                                    <a href="#" class="banner text-left">
+                                                        <img src="images/banners/megamenu-banner2.jpg" alt="Banner">
+                                                        <div class="banner-container text-center text-uppercase">
+                                                            <h5>Stylish</h5>
+                                                            <h4>Women Suits</h4>
+                                                            <h5>starting at <span>$220</span></h5>
+                                                        </div><!-- End .banner-container -->
+                                                    </a><!-- End .banner -->
+                                                </div><!-- End .col-md-4 -->
+                                            </div><!-- End .row -->
+                                        </div><!-- End .container -->
+                                    </div><!-- End.megamenu -->
+                                </li>
+                                <li><a href="blog.html">Artists</a>
+                                    <ul>
+                                        <li><a href="blog.html">Right Sidebar</a></li>
+                                        <li><a href="blog-sidebar-left.html">Left Sidebar</a></li>
+                                        <li><a href="blog-sidebar-both.html">Both Sidebar</a></li>
+                                        <li><a href="blog-fullwidth.html">Fullwidth Blog</a></li>
+                                        <li><a href="single.html">Post Page</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="contact.html">Contact Us</a>
+                                    <ul>
+                                        <li><a href="contact.html">Contact Us</a></li>
+                                        <li><a href="contact-two.html">Contact Us 2</a></li>
+                                    </ul>
+                                </li>
+                                
+                                <li><a href="#">Sale</a></li>
+                                
+                            <div class="cart-dropdown dropdown pull-right" style="margin-top:6px;margin-right:6px;">
+
+                                <a title="Shopping Cart" class="dropdown-toggle" data-toggle="dropdown"><span class="dropdown-icon"></span><span class="badge visible-xs">2</span><span class="hidden-xs">Cart- <%=javascript_tag do%>
+              $('.amount').val();
+            <%end%></span></a>
+
+                                    <div class="dropdown-menu" style="width:102px;">
+                                        <p class="cart-desc">Total of your cart - <%=javascript_tag do%>
+              $('.amount').val();
+            <%end%></p> 
+                                        <a href="/cart" style="text-align:center;"><span class="dropdown-icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CART</span> </a>                                   
+                                    </div>
+
+
+                            </div><!-- End .cart-dropdown -->
+                                  
+
+
+
+                            </ul>
+                        </nav><!-- End #main-nav -->   
+                    </div><!-- End .col-sm-12 -->
+                </div><!-- End .row -->
+</div><!-- End .container -->
+
+            <!--copied till here 3-->
+
+<%=render 'spree/shared/custom/mainjs'%>
+
