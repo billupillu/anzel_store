@@ -5,9 +5,9 @@ Spree::Image.class_eval do
   secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
   bucket: ENV['ENV_BUCKET_NAME']
   },
-    :mini => '60x60>', # thumbs under image
+    :mini => '60x76>', # thumbs under image
     :small => '270x340>', # images on category view
     :product => '670x844>', # full product image
-    :large => '800x800>' # light box image
+    :large => '700x881>' # light box image
   }
 end
