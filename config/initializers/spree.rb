@@ -1,6 +1,9 @@
 
 #--------------------------------------------
 Spree.config do |config|
+  config.admin_interface_logo = "logo.png"
+  
+
   attachment_config={
   s3_credentials: {
   access_key_id: ENV['AWS_ACCESS_KEY_ID'],
@@ -28,7 +31,7 @@ Spree.config do |config|
   end
 end
 
-
+# Spree::Config[:attachment_styles] = {mini: '50x50>', small: '180x180>', product: '270x340>', large: '670x844>'}.to_json
 
     
 
