@@ -17,10 +17,10 @@ Spree.config do |config|
   s3_host_name: "s3-us-west-2.amazonaws.com",
   url:         "url",
   styles:      {
-                 mini:   "48x48>",
-                 small:  "100x100>",
-                 product:"240x240>",
-                 large:  "600x600>"
+                 mini:   "60x60>",
+                 small:  "270x340>",
+                 product:"670x844>",
+                 large:  "800x800>"
                },
   path:        "/spree/:class/:id/:style/:basename.:extension",
   default_url: "/spree/products/:id/:style/:basename.:extension",
@@ -31,8 +31,7 @@ Spree.config do |config|
   end
 end
 
-
-
+  
     
 
 
