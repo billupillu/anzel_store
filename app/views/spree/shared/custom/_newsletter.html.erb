@@ -1,0 +1,24 @@
+<%1.times do%>
+<%a="text-shadow:-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff,1px 1px 0 #fff;"%>
+<%k = Spree::Newsletter.last%>
+<div id="newsletter-section" class="small parallax" data-stellar-background-ratio="0.3" style="background-image:url(<%=k.newsletter_img%>)">
+    <div class="vcenter-container">
+        <div class="vcenter">
+            <div class="newsletter-content text-center">
+                <h3 style="<%=a%>"><%=k.newsletter_h1%></h3>
+                <h2 style="<%=a%>"><%=k.newsletter_h2%></h2>
+                <p style="<%=a%> letter-spacing:3px;"><%=truncate(k.newsletter_p,length: 88)%>...</p>
+                
+                     <form action="#" id="newsletter">
+                         <div class="input-group input-group-lg">
+                            
+                             <span class="input-group-btn">
+                                 <a class="btn btn-custom-3" href="<%=k.newsletter_url%>">DIVE IN!</a>
+                             </span>
+                         </div><!-- End .input-group -->
+                     </form>
+            </div><!-- End .newsletter-content -->
+        </div><!-- End .vcenter -->
+    </div><!-- End .vcenter-container -->
+</div><!-- #newsletter-section -->
+<%end%>

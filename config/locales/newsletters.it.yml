@@ -1,0 +1,16 @@
+it:
+  spree:
+    admin:
+      tab:
+        newsletters: "Newsletters"
+    new_newsletter: "Nuovo Newsletter"
+    listing_newsletters: "Lista Newsletters"
+    editing_newsletter: "Modifica Newsletter"
+  activerecord:
+    attributes:
+      spree/newsletter:
+        newsletter_h1: Newsletter H1
+        newsletter_h2: Newsletter H2
+        newsletter_p: Newsletter P
+        newsletter_url: Newsletter Url
+        newsletter_img: Newsletter Img

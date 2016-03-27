@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160327075618) do
+ActiveRecord::Schema.define(version: 20160327190957) do
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
@@ -216,6 +216,19 @@ ActiveRecord::Schema.define(version: 20160327075618) do
   end
 
   add_index "spree_log_entries", ["source_id", "source_type"], name: "index_spree_log_entries_on_source_id_and_source_type"
+
+  create_table "spree_newsletters", force: :cascade do |t|
+    t.string   "newsletter_h1",               limit: 40
+    t.string   "newsletter_h2",               limit: 40
+    t.string   "newsletter_p"
+    t.string   "newsletter_url"
+    t.string   "newsletter_img_file_name"
+    t.string   "newsletter_img_content_type"
+    t.integer  "newsletter_img_file_size"
+    t.datetime "newsletter_img_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "spree_option_types", force: :cascade do |t|
     t.string   "name",         limit: 100

@@ -67,3 +67,9 @@ Spree::Core::Engine.add_routes do
     resources :candies
   end
 end
+
+Spree::Core::Engine.add_routes do
+  namespace :admin do
+    resources :newsletters
+  end
+end

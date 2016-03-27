@@ -34,10 +34,12 @@
           <% cache(@taxon.present? ? [I18n.locale, current_currency, @taxon, product] : [I18n.locale, current_currency, product]) do %>
             <div class="product-top" style="background-color:#59b0c4;">
                 <figure class="product-image-container" style="width:270px;height:340px;">
-                  <a href="<%=url%>" title="<%=product.name%>">
-                      <%= link_to small_image(product, itemprop: "image",class: "product-image"), url, itemprop: 'url' %><br/>
-                      <img src="<%=asset_path 'sec.png'%>" alt="<%=product.name%>" class="product-image-hover">
-                  </a> 
+                 
+                         
+                                              <%= link_to small_image(product, itemprop: "image",class: "product-image"), url, itemprop: 'url' %><br/>
+                                               <a href="<%=url%>" title="<%=product.name%>">
+                                              <%= small_image(product,class: "product-image-hover") %> 
+                                             <img src="<%=asset_path 'sec.png'%>" alt="<%=product.name%>" class="product-image-hover" style="opacity:0.6;"> </a> 
                 </figure>
             </div>
 

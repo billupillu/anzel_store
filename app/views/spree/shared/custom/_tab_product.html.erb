@@ -1,64 +1,62 @@
 <%1.times do%>
-<div class="tab-content">
-                                <div class="tab-pane fade in active" id="newarrivals">
-                                    <%products=Spree::Product.all%>
-    <% if products.any? %>
-  <div id="products" class="row" data-hook>
-    <% products.take(6).each do |product| %>
-        <% url = spree.product_url(product, taxon_id: @taxon.try(:id)) %>
+    <div class="tab-content">
+        <div class="tab-pane fade in active" id="newarrivals">
+            <%products=Spree::Product.take(6)%>
+            <% if products.any? %>
+                <div id="products" class="row" data-hook>
+                    <% products.each do |product| %>
+                        <% url = spree.product_url(product, taxon_id: @taxon.try(:id)) %>
 
+                        <div id="product_<%= product.id %>" class="col-sm-4" data-hook="products_list_item" itemscope itemtype="https://schema.org/Product" style="margin-bottom:25px;">
 
-      
-      <div id="product_<%= product.id %>" class="col-sm-4" data-hook="products_list_item" itemscope itemtype="https://schema.org/Product" style="margin-bottom:25px;">
+                            <div class="product product5">
+                                <% cache(@taxon.present? ? [I18n.locale, current_currency, @taxon, product] : [I18n.locale, current_currency, product]) do %>
+                                    <div class="product-top" style="background-color:#59b0c4;">
+                                        <figure class="product-image-container" style="width:270px;height:340px;">
+                                          
+                                              <%= link_to small_image(product, itemprop: "image",class: "product-image"), url, itemprop: 'url' %><br/>
+                                               <a href="<%=url%>" title="<%=product.name%>">
+                                              <%= small_image(product,class: "product-image-hover") %> 
+                                             <img src="<%=asset_path 'sec.png'%>" alt="<%=product.name%>" class="product-image-hover" style="opacity:0.6;"> </a> 
+                                            
+                                         
+                                        </figure>
+                                    </div>
 
-        <div class="product product5">
-          <% cache(@taxon.present? ? [I18n.locale, current_currency, @taxon, product] : [I18n.locale, current_currency, product]) do %>
-            <div class="product-top" style="background-color:#59b0c4;">
-                <figure class="product-image-container" style="width:270px;height:340px;">
-                  <a href="<%=url%>" title="<%=product.name%>">
-                      <%= link_to small_image(product, itemprop: "image",class: "product-image"), url, itemprop: 'url' %><br/>
-                      
-                        <%= link_to small_image(product, itemprop: "image",class: "product-image-hover"), url, itemprop: 'url' %>
-                    
-                  </a>
-                </figure>
-            </div>
+                                <div class="product-price-container text-left">
+                                    <span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                    <span class="product-price price selling lead" itemprop="price"><%= display_price(product) %></span>
+                                  </span>
+                                </div>
+                                <h3 class="product-name text-left">
+                                  <%= link_to truncate(product.name, length: 50), url, class: 'info', itemprop: "name", title: product.name %>
+                                </h3>
 
-            <div class="product-price-container text-left">
-                <span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                <span class="product-price price selling lead" itemprop="price"><%= display_price(product) %></span>
-              </span>
-            </div>
-            <h3 class="product-name text-left">
-              <%= link_to truncate(product.name, length: 50), url, class: 'info', itemprop: "name", title: product.name %>
-            </h3>
-
-
-            <div class="product-action-container clearfix">
-                                                    <a href="<%=url%>" title="Add to Cart" class="product-add-btn">
-                                                        <span class="add-btn-text">Add to Cart</span>
-                                                        <span class="product-btn product-cart">Cart</span>
-                                                    </a>
-                                                    <div class="product-action-inner">
-                                                        <a href="#" title="Favorite" class="product-btn product-favorite">Favorite</a>
-                                                        <a href="#" title="Compare" class="product-btn product-compare">Compare</a>
-                                                    </div><!-- End .product-action-right -->
-                                                </div><!-- End .product-action-container -->
-           
-          <% end %>
-        </div>
-
-      </div>
+                                <div class="product-action-container clearfix">
+                                    <a href="<%=url%>" title="Add to Cart" class="product-add-btn">
+                                        <span class="add-btn-text">Add to Cart</span>
+                                        <span class="product-btn product-cart">Cart</span>
+                                    </a>
+                                    <div class="product-action-inner">
+                                        <a href="#" title="Favorite" class="product-btn product-favorite">Favorite</a>
+                                        <a href="#" title="Compare" class="product-btn product-compare">Compare</a>
+                                    </div><!-- End .product-action-right -->
+                                </div><!-- End .product-action-container -->
+                   
+                            <% end %>
+                            </div>
+                        </div>
 
 
 
 
-    <% end %>
-    <% reset_cycle("classes") %>
-  </div>
-<% end %>
-                                </div><!-- End .tab-pane -->
+                    <% end %>
+                <% reset_cycle("classes") %>
+                </div>
+            <% end %>
+        </div><!-- End .tab-pane -->
     </div>
 
 
 <%end%>
+
