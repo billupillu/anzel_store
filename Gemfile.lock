@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/freego/spree_scaffold.git
+  revision: fb2176a2f6728497435286f264b3fee531818ca4
+  branch: 3-0-stable
+  specs:
+    spree_scaffold (3.0.0)
+      spree_core (~> 3.0.0)
+
+GIT
   remote: git://github.com/spree-contrib/spree_email_to_friend.git
   revision: bada2e955ed63704867a186d3dd0e469ff8b8004
   branch: 3-0-stable
@@ -378,6 +386,7 @@ DEPENDENCIES
   spree_auth_devise!
   spree_email_to_friend!
   spree_gateway!
+  spree_scaffold!
   spree_wishlist!
   spring
   sqlite3

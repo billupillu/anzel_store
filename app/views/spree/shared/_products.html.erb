@@ -28,7 +28,7 @@
 
 
       
-      <div id="product_<%= product.id %>" class="col-sm-4" data-hook="products_list_item" itemscope itemtype="https://schema.org/Product">
+      <div id="product_<%= product.id %>" class="col-sm-4" data-hook="products_list_item" itemscope itemtype="https://schema.org/Product" style="margin-bottom:25px;">
 
         <div class="product product5">
           <% cache(@taxon.present? ? [I18n.locale, current_currency, @taxon, product] : [I18n.locale, current_currency, product]) do %>
@@ -61,7 +61,7 @@
                                                         <a href="#" title="Compare" class="product-btn product-compare">Compare</a>
                                                     </div><!-- End .product-action-right -->
                                                 </div><!-- End .product-action-container -->
-            
+           
           <% end %>
         </div>
 

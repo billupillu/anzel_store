@@ -1,0 +1,22 @@
+
+<div class="banner-group">
+                            <div class="row">
+                            <%Spree::Candy.take(2).each do |candy|%>
+                                <div class="col-sm-6">
+                                    <div class="banner banner-sm light">
+                                        <%=image_tag candy.candy_img(:medium), alt: "#{candy.candy_h2}"%>
+                                        <div class="banner-container">
+                                            <div class="vcenter-container">
+                                                <div class="vcenter ">
+                                                    <h4 style="text-shadow:0 0 0 2px #525252;"><span class="star-icon"></span><%=candy.candy_h1%><span class="star-icon"></span></h4>
+                                                    <h3 style="text-shadow:0 0 0 2px #525252;"><%=candy.candy_h2%></h3>
+                                                    <a href="<%=candy.candy_url%>" class="btn btn-custom-7 min-width-md">Take look</a>
+                                                </div><!-- End .row -->
+                                            </div><!-- End .vcenter-container -->
+                                        </div><!-- End .banner-container -->
+                                    </div><!-- End .banner -->
+                                </div><!-- End .col-sm-6 -->
+                            <%end%>
+                            </div><!-- End .row -->
+</div><!-- End .banner-group -->
+

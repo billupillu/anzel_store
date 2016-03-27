@@ -1,0 +1,14 @@
+en:
+  spree:
+    admin:
+      tab:
+        candies: "Candies"
+    new_candy: "New Candy"
+    listing_candies: "Listing Candies"
+    editing_candy: "Editing Candy"
+  activerecord:
+    attributes:
+      spree/candy:
+        candy_h1: Candy H1
+        candy_h2: Candy H2
+        candy_img: Candy Img

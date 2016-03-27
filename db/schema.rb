@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160321141542) do
+ActiveRecord::Schema.define(version: 20160327075618) do
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
@@ -104,6 +104,18 @@ ActiveRecord::Schema.define(version: 20160321141542) do
   add_index "spree_calculators", ["calculable_id", "calculable_type"], name: "index_spree_calculators_on_calculable_id_and_calculable_type"
   add_index "spree_calculators", ["deleted_at"], name: "index_spree_calculators_on_deleted_at"
   add_index "spree_calculators", ["id", "type"], name: "index_spree_calculators_on_id_and_type"
+
+  create_table "spree_candies", force: :cascade do |t|
+    t.string   "candy_h1"
+    t.string   "candy_h2"
+    t.string   "candy_url"
+    t.string   "candy_img_file_name"
+    t.string   "candy_img_content_type"
+    t.integer  "candy_img_file_size"
+    t.datetime "candy_img_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "spree_countries", force: :cascade do |t|
     t.string   "iso_name"

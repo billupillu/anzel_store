@@ -61,3 +61,9 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 end
+
+Spree::Core::Engine.add_routes do
+  namespace :admin do
+    resources :candies
+  end
+end

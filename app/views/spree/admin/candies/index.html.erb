@@ -1,0 +1,33 @@
+<% content_for :page_title do %>
+  <%= Spree.t(:listing_candies) %>
+<% end %>
+
+<% content_for :page_actions do %>
+  <%= button_link_to Spree.t(:new_candy), new_object_url, class: 'btn-success', icon: 'add', id: 'admin_new_candy_link' %>
+<% end if can?(:create, Spree::Candy) %>
+
+<table class="table" id="listing_candies" data-hook>
+  <thead>
+    <tr data-hook="admin_candies_index_headers">
+      <th><%= t(:candy_h1, scope: 'activerecord.attributes.spree/candy') %></th>
+      <th data-hook="admin_candies_index_header_actions" class="actions"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @candies.each do |candy| %>
+      <tr id="<%= spree_dom_id candy %>" data-hook="admin_candies_index_rows" class="<%= cycle('odd', 'even')%>">
+        <td><%= link_to candy.candy_h1, edit_object_url(candy) %></td>
+        
+        <td><%= candy.candy_h2 %></td>
+        <td><%= truncate("#{candy.candy_url}",length: 15) %></td>
+        <td><%= image_tag candy.candy_img(:thumb) %></td>
+        <td data-hook="admin_candies_index_row_actions" class="actions text-right">
+          <%= link_to_edit candy, no_text: true %>
+          <%= link_to_delete candy, no_text: true %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= paginate @candies %>

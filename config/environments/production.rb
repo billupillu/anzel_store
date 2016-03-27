@@ -78,4 +78,15 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
   config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
   config.assets.precompile += %w( .svg .eot .woff .ttf)
+
+#   config.paperclip_defaults = {
+#   :storage => :s3,
+#   :s3_credentials => {
+#     :bucket => ENV['S3_BUCKET_NAME'],
+#     :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+#     :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+#   }
+# }
+# config/initializers/paperclip.rb
+#Paperclip::Attachment.default_options[:s3_host_name] = 's3-us-west-2.amazonaws.com'
 end
