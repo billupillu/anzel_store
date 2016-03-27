@@ -13,7 +13,7 @@ Spree.config do |config|
   storage:     :s3,
   s3_headers:  {"Cache-Control"=>"max-age=31557600"},
   s3_protocol: "https",
-  bucket:      ENV['S3_BUCKET_NAME'],
+  bucket:      ENV['ENV_BUCKET_NAME'],
   s3_host_name: "s3-us-west-2.amazonaws.com",
   url:         "url",
   styles:      {

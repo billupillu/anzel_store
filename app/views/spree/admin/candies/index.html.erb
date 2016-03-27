@@ -20,7 +20,7 @@
         
         <td><%= candy.candy_h2 %></td>
         <td><%= truncate("#{candy.candy_url}",length: 15) %></td>
-        <td><%= image_tag candy.candy_img(:thumb) %></td>
+        <td><%= image_tag candy.candy_img(:thumb), alt: "#{candy.candy_h2}"%></td>
         <td data-hook="admin_candies_index_row_actions" class="actions text-right">
           <%= link_to_edit candy, no_text: true %>
           <%= link_to_delete candy, no_text: true %>
