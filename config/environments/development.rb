@@ -42,10 +42,7 @@ Rails.application.configure do
   config.assets.precompile += %w( .svg .eot .woff .ttf)
     config.paperclip_defaults = {
   :storage => :s3,
-  s3_headers:  {"Cache-Control"=>"max-age=31557600"},
-  s3_protocol: "https",
-  bucket:      ENV['ENV_BUCKET_NAME'],
-  s3_host_name: "s3-us-west-2.amazonaws.com",
+ 
   :s3_credentials => {
     :bucket => ENV['ENV_BUCKET_NAME'],
     :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
