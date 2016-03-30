@@ -13,27 +13,27 @@
 
 
 	
-$(document).ready(function(){
+// $(document).ready(function(){
 	
 
-       $("#kkkk").owlCarousel({
+//        $("#kkkk").owlCarousel({
  
-      navigation : true, // Show next and prev buttons
-      autoPlay : 3000,
-      slideSpeed : 300,
-      paginationSpeed : 500,
-      stopOnHover : true,
-      singleItem:true
+//       navigation : true, // Show next and prev buttons
+//       autoPlay : 3000,
+//       slideSpeed : 300,
+//       paginationSpeed : 500,
+//       stopOnHover : true,
+//       singleItem:true
  
-      // "singleItem:true" is a shortcut for:
-      // items : 1, 
-      // itemsDesktop : false,
-      // itemsDesktopSmall : false,
-      // itemsTablet: false,
-      // itemsMobile : false
+//       // "singleItem:true" is a shortcut for:
+//       // items : 1, 
+//       // itemsDesktop : false,
+//       // itemsDesktopSmall : false,
+//       // itemsTablet: false,
+//       // itemsMobile : false
  
-  });
+//   });
 
-    $('.owl-pagination').css({"display":"none"});
-});
+//     $('.owl-pagination').css({"display":"none"});
+// });
 

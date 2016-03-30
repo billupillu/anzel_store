@@ -66,9 +66,11 @@
 		</div><!-- End .row -->
     </div><!-- End .container -->
 </section>
-<%=javascript_tag do%>$("#artists-brief").owlCarousel({
+<%=javascript_tag do%>
+$(document).ready(function(){
+$("#artists-brief").owlCarousel({
  
-      autoPlay: 3000, //Set AutoPlay to 3 seconds
+      autoPlay: 3000, 
  
       items : 2,
       itemsDesktop : [1199,3],
@@ -76,6 +78,6 @@
  
     });
      $('.owl-pagination').css({"display":"none"});
-    //$('#kk .owl-prev').css({"display":"none"});
-    //$('#kk .owl-next').css({"display":"none"});
+   
+    });
 <%end%>
