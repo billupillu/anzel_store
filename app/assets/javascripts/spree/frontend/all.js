@@ -14,18 +14,7 @@
 
 	
 $(document).ready(function(){
-	$("#artists-brief").owlCarousel({
- 
-      autoPlay: 3000, //Set AutoPlay to 3 seconds
- 
-      items : 2,
-      itemsDesktop : [1199,3],
-      itemsDesktopSmall : [979,3]
- 
-    });
-     $('.owl-pagination').css({"display":"none"});
-    //$('#kk .owl-prev').css({"display":"none"});
-    //$('#kk .owl-next').css({"display":"none"});
+	
 
        $("#kkkk").owlCarousel({
  
