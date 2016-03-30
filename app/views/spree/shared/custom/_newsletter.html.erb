@@ -1,7 +1,7 @@
 <%1.times do%>
-<%a="text-shadow:-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff,1px 1px 0 #fff;"%>
+<%a="text-shadow:-0.5px -0.5px 0 #fff,0.5px -0.5px 0 #fff,-0.5px 0.5px 0 #fff,0.5px 0.5px 0 #fff;"%>
 <%k = Spree::Newsletter.last%>
-<div id="newsletter-section" class="small parallax" data-stellar-background-ratio="0.3" style="background-image:url(<%=k.newsletter_img%>)">
+<div id="newsletter-section" class="small parallax" data-stellar-background-ratio="0.3" style="background-image:url(<%=k.newsletter_img%>);height:320px;">
     <div class="vcenter-container">
         <div class="vcenter">
             <div class="newsletter-content text-center">

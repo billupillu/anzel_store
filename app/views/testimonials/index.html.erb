@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Testimonials</h1>
+
+<table>
+  <thead>
+    <tr>
+      
+      <th>Name</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @testimonials.each do |testimonial| %>
+      <tr>
+        
+        <td><%= testimonial.name %></td>
+        <td><%= testimonial.content %></td>
+        <%if spree_current_user.id == testimonial.spree_user_id || spree_current_user.has_spree_role?("admin") %>
+          <td><%= link_to 'Show', testimonial %></td>
+          <td><%= link_to 'Edit', edit_testimonial_path(testimonial) %></td>
+          <td><%= link_to 'Destroy', testimonial, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <%else%>
+        <%end%>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Testimonial', new_testimonial_path %>

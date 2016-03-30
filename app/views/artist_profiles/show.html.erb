@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>A name:</strong>
+  <%= @artist_profile.a_name %>
+</p>
+
+<p>
+  <strong>A skills:</strong>
+  <%= @artist_profile.a_skills %>
+</p>
+
+<p>
+  <strong>A top workshops:</strong>
+  <%= @artist_profile.a_top_workshops %>
+</p>
+
+<p>
+  <strong>A img:</strong>
+  <%= image_tag @artist_profile.a_img(:thumb) %>
+</p>
+
+<p>
+  <strong>A brief:</strong>
+  <%= @artist_profile.a_brief %>
+</p>
+
+<p>
+  <strong>A xtra:</strong>
+  <%= @artist_profile.a_xtra %>
+</p>
+
+<p>
+  <strong>A dob:</strong>
+  <%= @artist_profile.a_dob %>
+</p>
+
+<p>
+  <strong>A edu:</strong>
+  <%= @artist_profile.a_edu %>
+</p>
+<%if spree_current_user.id == @artist_profile.spree_user_id || spree_current_user.has_spree_role?("admin") %>
+  <%= link_to 'Edit', edit_artist_profile_path(@artist_profile) %> |
+  <%if spree_current_user.has_spree_role?("admin")%>
+    <%= link_to 'Back', "/admin/artists" %>
+  <%end%>  
+<%end%>

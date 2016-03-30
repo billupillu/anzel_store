@@ -1,7 +1,7 @@
-<%1.times do%>
+
     <div class="tab-content">
         <div class="tab-pane fade in active" id="newarrivals">
-            <%products=Spree::Product.take(6)%>
+            <%products=Spree::Product.take(9)%>
             <% if products.any? %>
                 <div id="products" class="row" data-hook>
                     <% products.each do |product| %>
@@ -58,5 +58,5 @@
     </div>
 
 
-<%end%>
+
 

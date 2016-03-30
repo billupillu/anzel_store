@@ -1,0 +1,74 @@
+
+
+<h1>Listing Artist Profiles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Artist name</th>
+      <th>Artist skills</th>
+      <th>Artist top workshops</th>
+      <th>Artist img</th>
+      <th>Artist brief</th>
+      <th>Artist xtra</th>
+      <th>Artist dob</th>
+      <th>Artist edu</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% ArtistProfile.all.each do |artist_profile| %>
+      <tr>
+        <td><%= artist_profile.a_name %></td>
+        <td><%= artist_profile.a_skills %></td>
+        <td><%= artist_profile.a_top_workshops %></td>
+        <td><%= image_tag artist_profile.a_img(:medium) %></td>
+        <td><%= artist_profile.a_brief %></td>
+        <td><%= artist_profile.a_xtra %></td>
+        <td><%= artist_profile.a_dob %></td>
+        <td><%= artist_profile.a_edu %></td>
+        <td><%= link_to 'Show', "/artist_profiles/#{artist_profile.id}" %></td>
+        <td><%= link_to 'Edit', "/artist_profiles/#{artist_profile.id}/edit" %></td>
+        <td><%= link_to 'Destroy',"/artist_profiles/#{artist_profile.id}", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to 'New Artist profile', "/artist_profiles/new" %>
+<!--
+
+
+
+<%# content_for :page_title do %>
+  <%#= Spree.t(:listing_artists) %>
+<%# end %>
+
+<%# content_for :page_actions do %>
+  <%#= button_link_to Spree.t(:new_artist), new_object_url, class: 'btn-success', icon: 'add', id: 'admin_new_artist_link' %>
+<%# end if can?(:create, Spree::Artist) %>
+
+<table class="table" id="listing_artists" data-hook>
+  <thead>
+    <tr data-hook="admin_artists_index_headers">
+      <th><%#= t(:name, scope: 'activerecord.attributes.spree/artist') %></th>
+      <th data-hook="admin_artists_index_header_actions" class="actions"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%# @artists.each do |artist| %>
+      <tr id="<%#= spree_dom_id artist %>" data-hook="admin_artists_index_rows" class="<%= cycle('odd', 'even')%>">
+        <td><%#= link_to artist.name, edit_object_url(artist) %></td>
+        <td data-hook="admin_artists_index_row_actions" class="actions text-right">
+          <%#= link_to_edit artist, no_text: true %>
+          <%#= link_to_delete artist, no_text: true %>
+        </td>
+      </tr>
+    <%# end %>
+  </tbody>
+</table>
+
+<%#= paginate @artists %> -->
+

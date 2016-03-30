@@ -1,0 +1,41 @@
+<div class="testimonials-section home-two parallax" data-stellar-background-ratio="0.4" style="background-image: url(<%=asset_path 'testimonial.jpg'%>)">
+                            <h2>Testimonials</h2>
+                            <div class="vcenter-container">
+                                <div class="vcenter bottom-nav">
+                                    <div id="kk" class="owl-carousel testimonials-slider" style="display:inline;">
+                                    	<%Testimonial.take(10).each do |test|%>
+                                        <div class="testimonial">
+                                            <span class="quote-icon"></span>
+                                            <p><%=test.content%></p>
+                                            <span class="testimonial-owner"><%=test.name%></span>
+                                        </div><!-- End .testimonial -->
+                                        <%end%>
+                                    </div><!-- End .about-banner-slider -->
+                                </div><!-- End .vcenter -->
+                            </div><!-- End .vcenter-container -->
+                        </div><!-- end .testimonials-section -->
+
+<%=javascript_tag do%>
+
+
+   $("#kk").owlCarousel({
+ 
+      navigation : true, // Show next and prev buttons
+      autoPlay : 3000,
+      slideSpeed : 300,
+      paginationSpeed : 500,
+      stopOnHover : true,
+      singleItem:true
+ 
+      // "singleItem:true" is a shortcut for:
+      // items : 1, 
+      // itemsDesktop : false,
+      // itemsDesktopSmall : false,
+      // itemsTablet: false,
+      // itemsMobile : false
+ 
+  });
+
+    $('.owl-pagination').css({"display":"none"});
+ 
+<%end%>          

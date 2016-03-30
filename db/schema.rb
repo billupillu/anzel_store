@@ -11,7 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160327190957) do
+ActiveRecord::Schema.define(version: 20160329102921) do
+
+  create_table "artist_profiles", force: :cascade do |t|
+    t.string   "a_name"
+    t.string   "a_skills"
+    t.string   "a_top_workshops"
+    t.string   "a_img_file_name"
+    t.string   "a_img_content_type"
+    t.integer  "a_img_file_size"
+    t.datetime "a_img_updated_at"
+    t.text     "a_brief"
+    t.string   "a_xtra"
+    t.date     "a_dob"
+    t.string   "a_edu"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.integer  "spree_user_id"
+  end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
@@ -71,6 +88,11 @@ ActiveRecord::Schema.define(version: 20160327190957) do
   add_index "spree_adjustments", ["eligible"], name: "index_spree_adjustments_on_eligible"
   add_index "spree_adjustments", ["order_id"], name: "index_spree_adjustments_on_order_id"
   add_index "spree_adjustments", ["source_id", "source_type"], name: "index_spree_adjustments_on_source_id_and_source_type"
+
+  create_table "spree_artists", force: :cascade do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "spree_assets", force: :cascade do |t|
     t.integer  "viewable_id"
@@ -169,6 +191,13 @@ ActiveRecord::Schema.define(version: 20160327190957) do
 
   add_index "spree_gateways", ["active"], name: "index_spree_gateways_on_active"
   add_index "spree_gateways", ["test_mode"], name: "index_spree_gateways_on_test_mode"
+
+  create_table "spree_infos", force: :cascade do |t|
+    t.string   "info_h1"
+    t.text     "info_p"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "spree_inventory_units", force: :cascade do |t|
     t.string   "state"
@@ -1040,5 +1069,15 @@ ActiveRecord::Schema.define(version: 20160327190957) do
 
   add_index "spree_zones", ["default_tax"], name: "index_spree_zones_on_default_tax"
   add_index "spree_zones", ["kind"], name: "index_spree_zones_on_kind"
+
+  create_table "testimonials", force: :cascade do |t|
+    t.integer  "spree_user_id"
+    t.string   "name",          limit: 60
+    t.text     "content"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  add_index "testimonials", ["spree_user_id"], name: "index_testimonials_on_spree_user_id"
 
 end

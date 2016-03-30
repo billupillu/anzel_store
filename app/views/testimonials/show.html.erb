@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+
+
+<p>
+  <strong>Name:</strong>
+  <%= @testimonial.name %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @testimonial.content %>
+</p>
+<%if spree_current_user.id == @testimonial.spree_user_id || spree_current_user.has_spree_role?("admin") %>
+
+<%= link_to 'Edit', edit_testimonial_path(@testimonial) %> |
+<%= link_to 'Back', testimonials_path %>
+<%end%>

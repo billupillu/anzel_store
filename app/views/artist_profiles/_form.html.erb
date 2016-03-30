@@ -1,0 +1,51 @@
+<%= form_for(@artist_profile) do |f| %>
+  <% if @artist_profile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@artist_profile.errors.count, "error") %> prohibited this artist_profile from being saved:</h2>
+
+      <ul>
+      <% @artist_profile.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.hidden_field :spree_user_id, value: spree_current_user.id %>
+  
+  <div class="field">
+    <%= f.label :a_name %><br>
+    <%= f.text_field :a_name %>
+  </div>
+  <div class="field">
+    <%= f.label :a_skills %><br>
+    <%= f.text_field :a_skills %>
+  </div>
+  <div class="field">
+    <%= f.label :a_top_workshops %><br>
+    <%= f.text_field :a_top_workshops %>
+  </div>
+  <div class="field">
+    <%= f.label :a_img %><br>
+    <%= f.file_field :a_img %>
+  </div>
+  <div class="field">
+    <%= f.label :a_brief %><br>
+    <%= f.text_area :a_brief %>
+  </div>
+  <div class="field">
+    <%= f.label :a_xtra %><br>
+    <%= f.text_field :a_xtra %>
+  </div>
+  <div class="field">
+    <%= f.label :a_dob %><br>
+    <%= f.date_select :a_dob %>
+  </div>
+  <div class="field">
+    <%= f.label :a_edu %><br>
+    <%= f.text_field :a_edu %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

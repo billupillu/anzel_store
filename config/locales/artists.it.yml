@@ -1,0 +1,12 @@
+it:
+  spree:
+    admin:
+      tab:
+        artists: "Artists"
+    new_artist: "Nuovo Artist"
+    listing_artists: "Lista Artists"
+    editing_artist: "Modifica Artist"
+  activerecord:
+    attributes:
+      spree/artist:
+        name: Name

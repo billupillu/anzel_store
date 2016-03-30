@@ -1,0 +1,30 @@
+<% content_for :page_title do %>
+  <%= Spree.t(:listing_infos) %>
+<% end %>
+
+<% content_for :page_actions do %>
+  <%= button_link_to Spree.t(:new_info), new_object_url, class: 'btn-success', icon: 'add', id: 'admin_new_info_link' %>
+<% end if can?(:create, Spree::Info) %>
+
+<table class="table" id="listing_infos" data-hook>
+  <thead>
+    <tr data-hook="admin_infos_index_headers">
+      <th><%= t(:info_h1, scope: 'activerecord.attributes.spree/info') %></th>
+      <th data-hook="admin_infos_index_header_actions" class="actions"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @infos.each do |info| %>
+      <tr id="<%= spree_dom_id info %>" data-hook="admin_infos_index_rows" class="<%= cycle('odd', 'even')%>">
+        <td><%= link_to info.info_h1, edit_object_url(info) %></td>
+        <td><%=truncate(info.info_p,length: 280)%></td>
+        <td data-hook="admin_infos_index_row_actions" class="actions text-right">
+          <%= link_to_edit info, no_text: true %>
+          <%= link_to_delete info, no_text: true %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= paginate @infos %>

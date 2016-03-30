@@ -1,0 +1,193 @@
+<%allT = Spree::Taxonomy.all%>
+
+<%artistsss = allT.first.taxons.all%>
+<%tall = allT.offset(1).limit(2)%>
+<%tType = Spree::Taxonomy.find_by(position: 4)%>
+<%trest = allT.offset(4)%>
+
+<div class="widget side-menu-container">
+                            <h3>Categories</h3>
+                            <div class="side-menu">
+                                <ul>
+                                    <li>
+                                        <a  title="<%=tType.name%>" class="dropdown-toggle" data-toggle="dropdown">
+                                            <span class="category-right-icon">&#10175;&nbsp;&nbsp;</span><%=tType.name%>
+                                            <span class="category-dropdown-icon"></span>
+                                        </a>
+                                        <div class="dropdown-menu megamenu">
+                                            <img src="<%=asset_path 'menu1img.jpg'%>"  class="bgimage">
+                                             <div class="col-sm-4">
+                                                <a class="megamenu-title">Art Mediums</a>
+                                                <ul>
+                                                	<%tType.taxons.each do |l|%>
+                                                    <li><a href="/t/<%=l.permalink%>"><%=l.name%></a></li>
+                                                    <%end%>
+                                                </ul>
+                                            </div>
+                                           
+                                          
+                                        </div><!-- End .megamenu -->
+                                    </li>
+                                    <!-- Artists -->
+                                    <li>
+                                        <a  title="<%=allT.first.name%>" class="dropdown-toggle" data-toggle="dropdown">
+                                            <span class="category-right-icon">&#10175;&nbsp;&nbsp;</span><%=allT.first.name%>
+                                            <span class="category-dropdown-icon"></span>
+                                        </a>
+                                        <div class="dropdown-menu megamenu">
+                                            
+                                            <div class="col-sm-4">
+                                                <ul>
+                                                	<%artistsss.limit(7).each do |artistss|%>
+                                                    <li><a href="/t/<%=artistss.permalink%>"><%=artistss.name%></a></li>
+                                                    <%end%>
+                                                </ul>
+                                            </div>
+
+                                            <%if artistsss.count>7%>
+                                            	<div class="col-sm-4">
+	                                                <ul>
+	                                                	<%artistsss.offset(7).limit(7).each do |artistss|%>
+	                                                    <li><a href="/t/<%=artistss.permalink%>"><%=artistss.name%></a></li>
+	                                                    <%end%>
+	                                                </ul>
+	                                            </div>
+                                            <%end%>
+
+                                            <%if artistsss.count>14%>
+                                            	<div class="col-sm-4">
+	                                                <ul>
+	                                                	<%artistsss.offset(14).limit(7).each do |artistss|%>
+	                                                    <li><a href="/t/<%=artistss.permalink%>"><%=artistss.name%></a></li>
+	                                                    <%end%>
+	                                                </ul>
+	                                            </div>
+                                            <%end%>
+
+                                            <%if artistsss.count>21%>
+                                            	<div class="col-sm-4">
+	                                                <ul>
+	                                                	<%artistsss.offset(21).limit(7).each do |artistss|%>
+	                                                    <li><a href="/t/<%=artistss.permalink%>"><%=artistss.name%></a></li>
+	                                                    <%end%>
+	                                                </ul>
+	                                            </div>
+                                            <%end%>
+                                           
+                                           	<%if artistsss.count>28%>
+                                            	<div class="col-sm-4">
+	                                                <ul>
+	                                                	<%artistsss.offset(28).limit(7).each do |artistss|%>
+	                                                    <li><a href="/t/<%=artistss.permalink%>"><%=artistss.name%></a></li>
+	                                                    <%end%>
+	                                                </ul>
+	                                            </div>
+                                            <%end%>	
+
+                                            <%if artistsss.count>35%>
+                                            	<div class="col-sm-4">
+	                                                <ul>
+	                                                	<%artistsss.offset(35).limit(7).each do |artistss|%>
+	                                                    <li><a href="/t/<%=artistss.permalink%>"><%=artistss.name%></a></li>
+	                                                    <%end%>
+	                                                </ul>
+	                                            </div>
+                                            <%end%>
+
+                                            <%if artistsss.count>42%>
+                                            	<div class="col-sm-4">
+	                                                <ul>
+	                                                	<%artistsss.offset(42).limit(7).each do |artistss|%>
+	                                                    <li><a href="/t/<%=artistss.permalink%>"><%=artistss.name%></a></li>
+	                                                    <%end%>
+	                                                </ul>
+	                                            </div>
+                                            <%end%>
+
+                                            <%if artistsss.count>49%>
+                                            	<div class="col-sm-4">
+	                                                <ul>
+	                                                	<%artistsss.offset(49).limit(7).each do |artistss|%>
+	                                                    <li><a href="/t/<%=artistss.permalink%>"><%=artistss.name%></a></li>
+	                                                    <%end%>
+	                                                </ul>
+	                                            </div>
+                                            <%end%>
+
+                                            <%if artistsss.count>56%>
+                                            	<div class="col-sm-4">
+	                                                <ul>
+	                                                	<%artistsss.offset(56).limit(7).each do |artistss|%>
+	                                                    <li><a href="/t/<%=artistss.permalink%>"><%=artistss.name%></a></li>
+	                                                    <%end%>
+	                                                </ul>
+	                                            </div>
+                                            <%end%>
+                                          
+                                        </div><!-- End .megamenu -->
+                                    </li>
+
+
+                                    <%tall.each do |taxono|%>
+                                    <li>
+                                        <a  title="<%=taxono.name%>" class="dropdown-toggle" data-toggle="dropdown">
+                                            <span class="category-right-icon">&#10175;&nbsp;&nbsp;</span><%=taxono.name%>
+                                            <span class="category-dropdown-icon"></span>
+                                        </a>
+                                        <div class="dropdown-menu megamenu" style="width:220px !important;">
+                                           
+                                             <div class="col-sm-4">
+                                                
+                                                <ul>
+                                                	<%taxono.taxons.each do |l|%>
+                                                    <li><a href="/t/<%=l.permalink%>"><%=l.name%></a></li>
+                                                    <%end%>
+                                                </ul>
+                                            </div>
+                                           
+                                          
+                                        </div><!-- End .megamenu -->
+                                    </li>
+                                    <%end%>
+
+                                    <%if trest.empty?%>
+                                    <!--empty-->
+                                    <%else%>
+	                                    <%trest.each do |taxono|%>
+	                                    <li>
+	                                        <a  title="<%=taxono.name%>" class="dropdown-toggle" data-toggle="dropdown">
+	                                            <span class="category-right-icon">&#10175;&nbsp;&nbsp;</span><%=taxono.name%>
+	                                            <span class="category-dropdown-icon"></span>
+	                                        </a>
+	                                        <div class="dropdown-menu megamenu" style="width:220px !important;">
+	                                           
+	                                             <div class="col-sm-4">
+	                                                
+	                                                <ul>
+	                                                	<%taxono.taxons.each do |l|%>
+	                                                    <li><a href="/t/<%=l.permalink%>"><%=l.name%></a></li>
+	                                                    <%end%>
+	                                                </ul>
+	                                            </div>
+	                                           
+	                                          
+	                                        </div><!-- End .megamenu -->
+	                                    </li>
+	                                    <%end%>
+                                    <%end%>
+
+                                    
+                                    <li>
+                                        <a href="/products" title="Category Name">
+                                            <span class="category-icon icon-furniture"></span>All Products
+                                        </a>
+                                    </li>
+                                   
+                                    
+                                    
+                                
+                                    
+                                    
+                                </ul>
+                            </div><!-- End .side-menu -->
+                        </div><!-- End .widget -->

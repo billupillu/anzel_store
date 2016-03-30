@@ -1,0 +1,63 @@
+<%info=Spree::Info.take(4)%>
+                        <div class="about-company">
+                            <h2 class="carousel-title">Who we are?</h2>
+                            <div class="row">
+                                <div class="col-sm-7">
+                                    <div class="accordion accordion-reverse" id="accordion">
+                                        <div class="accordion-group panel">
+                                            <div class="accordion-title">
+                                                <%=info[0].info_h1%>
+                                                <a class="accordion-btn" data-toggle="collapse" data-parent="#accordion" href="#accordion-one"></a>
+                                            </div><!-- End .accourdion-title -->
+
+                                            <div class="accordion-body collapse in" id="accordion-one">
+                                                <div class="accordion-body-wrapper">
+                                                    <p><%=info[0].info_p%></p>
+                                                </div><!-- End .accordion-body-wrapper -->
+                                            </div><!-- End .accordion-body -->
+                                        </div><!-- End .accordion-group --> 
+                                        <div class="accordion-group panel">
+                                            <div class="accordion-title">
+                                                <%=info[1].info_h1%>
+                                                <a class="accordion-btn" data-toggle="collapse" data-parent="#accordion" href="#accordion-two"></a>
+                                            </div><!-- End .accourdion-title -->
+                                            <div class="accordion-body collapse" id="accordion-two">
+                                                <div class="accordion-body-wrapper">
+                                                    <p><%=info[1].info_p%></p>
+                                                </div><!-- End .accordion-body-wrapper -->
+                                            </div><!-- End .accordion-body -->
+                                        </div><!-- End .accordion-group -->
+                                        <div class="accordion-group panel">
+                                            <div class="accordion-title">
+                                                <%=info[2].info_h1%>
+                                                <a class="accordion-btn" data-toggle="collapse" data-parent="#accordion" href="#accordion-three"></a>
+                                            </div><!-- End .accourdion-title -->
+
+                                            <div class="accordion-body collapse" id="accordion-three">
+                                                <div class="accordion-body-wrapper">
+                                                    <p><%=info[2].info_p%></p>
+                                                </div><!-- End .accordion-body-wrapper -->
+                                            </div><!-- End .accordion-body -->
+                                        </div><!-- End .accordion-group --> 
+                                        <div class="accordion-group panel">
+                                            <div class="accordion-title">
+                                                <%=info[3].info_h1%>
+                                                <a class="accordion-btn" data-toggle="collapse" data-parent="#accordion" href="#accordion-four"></a>
+                                            </div><!-- End .accourdion-title -->
+
+                                            <div class="accordion-body collapse" id="accordion-four">
+                                                <div class="accordion-body-wrapper">
+                                                    <p><%=info[3].info_p%></p>
+                                                </div><!-- End .accordion-body-wrapper -->
+                                            </div><!-- End .accordion-body -->
+                                        </div><!-- End .accordion-group --> 
+                                    </div><!-- End .accordion -->
+                                </div><!-- End .col-sm-7 -->
+                                        
+                                <div class="md-margin visible-xs clearfix"></div><!-- space -->
+
+                                <div class="col-sm-5">
+                                    <img src="<%=asset_path 'info_img.jpg'%>" alt="ArtAnzels" class="img-responsive">
+                                </div><!-- End .col-sm-5 -->
+                            </div><!-- End .row -->
+                        </div><!-- End .about-company -->

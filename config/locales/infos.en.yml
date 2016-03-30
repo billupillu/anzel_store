@@ -1,0 +1,13 @@
+en:
+  spree:
+    admin:
+      tab:
+        infos: "Infos"
+    new_info: "New Info"
+    listing_infos: "Listing Infos"
+    editing_info: "Editing Info"
+  activerecord:
+    attributes:
+      spree/info:
+        info_h1: Info H1
+        info_p: Info P
