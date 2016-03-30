@@ -11,3 +11,40 @@
 //= require_tree .
 //= require spree/frontend/spree_wishlist
 
+
+	
+$(document).ready(function(){
+	$("#artists-brief").owlCarousel({
+ 
+      autoPlay: 3000, //Set AutoPlay to 3 seconds
+ 
+      items : 2,
+      itemsDesktop : [1199,3],
+      itemsDesktopSmall : [979,3]
+ 
+    });
+     $('.owl-pagination').css({"display":"none"});
+    //$('#kk .owl-prev').css({"display":"none"});
+    //$('#kk .owl-next').css({"display":"none"});
+
+       $("#kkkk").owlCarousel({
+ 
+      navigation : true, // Show next and prev buttons
+      autoPlay : 3000,
+      slideSpeed : 300,
+      paginationSpeed : 500,
+      stopOnHover : true,
+      singleItem:true
+ 
+      // "singleItem:true" is a shortcut for:
+      // items : 1, 
+      // itemsDesktop : false,
+      // itemsDesktopSmall : false,
+      // itemsTablet: false,
+      // itemsMobile : false
+ 
+  });
+
+    $('.owl-pagination').css({"display":"none"});
+});
+

@@ -1,101 +1,26 @@
 <div class="carousel-container">
-                            <h2 class="carousel-title">From The blog</h2>
+                            <h2 class="carousel-title">Our Skilled Artists</h2>
                             <div class="row">
-                                <div class="owl-carousel from-theblog-carousel from-theblog-wide">
-                                    <article class="article">
-                                        <div class="article-media-container">
-                                            <a href="single.html"><img src="images/blog/post1.jpg" class="img-responsive" alt="Post 1"></a>
-                                        </div><!-- End .article-media-container -->
+                                <div id="artists-brief" class="owl-carousel from-theblog-carousel from-theblog-wide" style="display:inline;">
 
-                                        <div class="article-meta-box">
-                                            <span class="article-icon article-date-icon"></span>
-                                            <span class="meta-box-text">05 Nov</span>
-                                        </div><!-- End .article-meta-box -->
-                                        <div class="article-meta-box article-meta-comments">
-                                            <span class="article-icon article-comment-icon"></span>
-                                            <a href="#" class="meta-box-text">15 Com</a>
-                                        </div><!-- End .article-meta-box -->
+                                    <%ArtistProfile.take(6).each do |artist|%>
+                                        <article class="article">
+                                            <div class="article-media-container">
+                                                <a ><img src="<%=artist.a_img(:thumb)%>" class="img-responsive" alt="<%=artist.a_name%>"></a>
+                                            </div><!-- End .article-media-container -->
 
-                                        <h3><a href="single.html">Lorem ipsum dolor sit amet</a></h3>
-                                        <p>Sed odio erat, pulvinar sit amet ipsum ut, mattis facilisis est. Curabitur libero justo, vulputate.</p>
-                                        <a href="single.html" class="readmore" role="button">Read More</a>
-                                    </article><!-- End .article -->
+                                            <div class="article-meta-box" style="padding-left:0;padding-right:0;">
+                                                <span class="article-icon article-date-icon"></span>
+                                                <span class="meta-box-text"><%=artist.a_dob%></span>
+                                            </div><!-- End .article-meta-box -->
 
-                                    <article class="article">
-                                        <div class="article-media-container">
-                                            <a href="single.html"><img src="images/blog/post2.jpg" class="img-responsive" alt="Post 2"></a>
-                                        </div><!-- End .article-media-container -->
-
-                                        <div class="article-meta-box">
-                                            <span class="article-icon article-date-icon"></span>
-                                            <span class="meta-box-text">12 Dec</span>
-                                        </div><!-- End .article-meta-box -->
-                                        <div class="article-meta-box article-meta-comments">
-                                            <span class="article-icon article-comment-icon"></span>
-                                            <a href="#" class="meta-box-text">27 Com</a>
-                                        </div><!-- End .article-meta-box -->
-
-                                        <h3><a href="single.html">Aenean nec varius arcu eget faucibus</a></h3>
-                                        <p>Nullam ac ornare ante, ac vulputate dolor. In nec velit eget libero feugiat dapibus et sed velit.</p>
-                                        <a href="single.html" class="readmore" role="button">Read More</a>
-                                    </article><!-- End .article -->
-
-                                    <article class="article">
-                                        <div class="article-media-container">
-                                            <a href="single.html"><img src="images/blog/post3.jpg" class="img-responsive" alt="Post 3"></a>
-                                        </div><!-- End .article-media-container -->
-
-                                        <div class="article-meta-box">
-                                            <span class="article-icon article-date-icon"></span>
-                                            <span class="meta-box-text">18 Nov</span>
-                                        </div><!-- End .article-meta-box -->
-                                        <div class="article-meta-box article-meta-comments">
-                                            <span class="article-icon article-comment-icon"></span>
-                                            <a href="#" class="meta-box-text">11 Com</a>
-                                        </div><!-- End .article-meta-box -->
-
-                                        <h3><a href="single.html">Lorem ipsum dolor sit amet</a></h3>
-                                        <p>Vivamus mollis varius metus in egestas. Vestibulum blandit auctor dolor. Ac vulputate do.</p>
-                                        <a href="single.html" class="readmore" role="button">Read More</a>
-                                    </article><!-- End .article -->
-                                    
-                                    <article class="article">
-                                        <div class="article-media-container">
-                                            <a href="single.html"><img src="images/blog/post4.jpg" class="img-responsive" alt="Post 4"></a>
-                                        </div><!-- End .article-media-container -->
-
-                                        <div class="article-meta-box">
-                                            <span class="article-icon article-date-icon"></span>
-                                            <span class="meta-box-text">03 Nov</span>
-                                        </div><!-- End .article-meta-box -->
-                                        <div class="article-meta-box article-meta-comments">
-                                            <span class="article-icon article-comment-icon"></span>
-                                            <a href="#" class="meta-box-text">18 Com</a>
-                                        </div><!-- End .article-meta-box -->
-
-                                        <h3><a href="single.html">Lorem ipsum dolor sit amet</a></h3>
-                                        <p>Eget tristique sem. Nam auctor orci eget nunc condimentum sollicitudin. Normasndus Strea nore il.</p>
-                                        <a href="single.html" class="readmore" role="button">Read More</a>
-
-                                    </article><!-- End .article -->
-                                    <article class="article">
-                                        <div class="article-media-container">
-                                            <a href="single.html"><img src="images/blog/post1.jpg" class="img-responsive" alt="Post 1"></a>
-                                        </div><!-- End .article-media-container -->
-
-                                        <div class="article-meta-box">
-                                            <span class="article-icon article-date-icon"></span>
-                                            <span class="meta-box-text">05 Nov</span>
-                                        </div><!-- End .article-meta-box -->
-                                        <div class="article-meta-box article-meta-comments">
-                                            <span class="article-icon article-comment-icon"></span>
-                                            <a href="#" class="meta-box-text">15 Com</a>
-                                        </div><!-- End .article-meta-box -->
-
-                                        <h3><a href="single.html">Lorem ipsum dolor sit amet</a></h3>
-                                        <p>Nunc a libero tristique, condimentum velit eget, tristique valid sem.</p>
-                                        <a href="single.html" class="readmore" role="button">Read More</a>
-                                    </article><!-- End .article -->
+                                            <h3><a ><%=artist.a_name%></a></h3>
+                                            <span class="meta-box-text"><%=truncate(artist.a_skills,length: 60)%></span>
+                                            <hr/>
+                                            <p><%=truncate(artist.a_brief,length: 100)%></p>
+                                            <a href="/artist_profiles/<%=artist.id%>" class="readmore" role="button">Read More</a>
+                                        </article><!-- End .article -->
+                                    <%end%>    
 
                                 </div><!-- End .container -->
                             </div><!-- End .container -->
