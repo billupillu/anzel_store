@@ -1,12 +1,12 @@
 <div class="carousel-container">
                             <h2 class="carousel-title">Our Skilled Artists</h2>
                             <div class="row">
-                                <div id="artists-brief" class="owl-carousel from-theblog-carousel from-theblog-wide" style="display:inline;">
+                                <div class="owl-carousel from-theblog-carousel from-theblog-wide" >
 
                                 	<%ArtistProfile.take(6).each do |artist|%>
 	                                    <article class="article">
 	                                        <div class="article-media-container">
-	                                            <a href="single.html"><img src="<%=artist.a_img(:thumb)%>" class="img-responsive" alt="<%=artist.a_name%>"></a>
+	                                            <a ><img src="<%=artist.a_img(:thumb)%>" class="img-responsive" alt="<%=artist.a_name%>"></a>
 	                                        </div><!-- End .article-media-container -->
 
 	                                        <div class="article-meta-box">
@@ -35,19 +35,3 @@
                             </div><!-- End .container -->
                         </div><!-- End .carousel-container -->
 
-<%=javascript_tag do%>
-	
-	$("#artists-brief").owlCarousel({
- 
-      autoPlay: 3000, //Set AutoPlay to 3 seconds
- 
-      items : 2,
-      itemsDesktop : [1199,3],
-      itemsDesktopSmall : [979,3]
- 
-    });
-     $('.owl-pagination').css({"display":"none"});
-    //$('#kk .owl-prev').css({"display":"none"});
-    //$('#kk .owl-next').css({"display":"none"});
-
-<%end%>            

@@ -107,45 +107,6 @@ WORKSHOPS
 2003 		Five Days Paintings Workshops Organized by Arman N.G.O., Tihar Jail, New Delhi. ", a_edu: "1988 M.F.A (Painting) With First Positon ")
 
 
-ArtistProfile.create(spree_user_id: 1, a_name: "KUNDAN KUMAR", a_skills: "Painter, Expertisein Madhubani painting, mughal art, Modern indian  art.", a_top_workshops: "PARTICIPATION
-: “Gayan Guhar”Sarva shiksha abhiyan poster makining 1996
-Kala shree art exhibition , patna 1997
-Photographic & fine arts society,patna medical college 1998.
-Art, culture & youth department ,Bihar sarkar & 
-Rashtriya seva yojina patna-1999
-Bangali festival kolkata 2000.
-Camlin art exibition 2001.
-State level art exibition(AIFACS) 2002.
-Rajgir mahotsav, 2007.
-GROUP SHOW:
-College of art&craft,Patna 2001.
-Kala utsav,Lucknow 2003.
-Art wave (a group of visual artist) Orissa 2004.
-New way of art, yojna vihar,New  Delhi 2010.
-International AIDS Awareness Programme organised by NIFAA Chandigarh, Washington 2012.
-       .   “Coordination” An Group Exhibition of contemporary painting & Sculptures, India Habitat Centre,New Delhi 2014", a_brief: " KUNDAN KUMAR
- BORN: 11-FEBUARY-1977
-Educationcational Qualification
-BFA (Bachelor of  fine arts painting)from Patna University in 2002.
-MFA (Masters  of  fine arts painting)from Pkk Chandigarh in 2007
-
-PARTICIPATION
-: “Gayan Guhar”Sarva shiksha abhiyan poster makining 1996
-Kala shree art exhibition , patna 1997
-Photographic & fine arts society,patna medical college 1998.
-Art, culture & youth department ,Bihar sarkar & 
-Rashtriya seva yojina patna-1999AWARD:
-College annual exhibition-2002.
-Yuva mahotsav,Jhansi-2003.Honour:
-Patliputra seva sansthan , Sanskar bharti, Rotary club of patna sahib,Nav jyoti sangh yuva sant samman-2007,PRIDE OF DELHI 2014, kalabhumi & TON Media", a_xtra: "AWARD:
-College annual exhibition-2002.
-Yuva mahotsav,Jhansi-2003.
-AIDS awareness from NIFAA (karnal, Harayana)-2012
-
-Honour:
-Patliputra seva sansthan , Sanskar bharti, Rotary club of patna sahib,Nav jyoti sangh yuva sant samman-2007,PRIDE OF DELHI 2014, kalabhumi & TON Media
-", a_edu: "BFA (Bachelor of  fine arts painting)from Patna University in 2002.
-MFA (Masters  of  fine arts painting)from Pkk Chandigarh in 2007")
 
 Testimonial.create(spree_user_id: 1, name: "Rajiv Kumar", content: "Art Anzels service is amazing, vast number of artists choises between different types of paintings and lot more")
 Testimonial.create(spree_user_id: 1, name: "Sana Khan", content: "Wow, Just wow..... Iam falling short of words for the amazing platform which artanzels has given to artists and their followers and art lovers ")
