@@ -1,3 +1,4 @@
+<%ab="text-shadow:-0.5px -0.5px 0 #fff,0.5px -0.5px 0 #fff,-0.5px 0.5px 0 #fff,0.5px 0.5px 0 #fff;"%>
 <%new_coll=Spree::NewCollection.last%>
 <div class="widget">
                             <div class="sidebar-banner">
@@ -5,7 +6,7 @@
                                 <div class="sidebar-banner-content">
                                     <div class="vcenter-container">
                                         <div class="vcenter">
-                                            <h5><span><%=new_coll.new_collection_h1%></span><%=new_coll.new_collection_h2%></h5>
+                                            <h5 style="<%=ab%>"><span><%=new_coll.new_collection_h1%></span><%=new_coll.new_collection_h2%></h5>
                                             <a href="/t/<%=new_coll.new_collection_url%>" class="btn btn-custom-7 min-width-md">Take a Look</a>
                                         </div><!-- End .vcenter -->
                                     </div><!-- End .vcenter-container -->
@@ -22,7 +23,7 @@
                                 <div class="sidebar-banner-content">
                                     <div class="vcenter-container">
                                         <div class="vcenter">
-                                            <h5><span><%=ad.adv_h1%></span><%=ad.adv_h2%></h5>
+                                            <h5 style="<%=ab%> color:#e61446 !important;"><span><%=ad.adv_h1%></span><%=ad.adv_h2%></h5>
                                             <a href="/t/<%=ad.adv_url%>" class="btn btn-custom-7 min-width-md">Jup to the Page</a>
                                         </div><!-- End .vcenter -->
                                     </div><!-- End .vcenter-container -->

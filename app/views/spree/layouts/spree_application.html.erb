@@ -48,7 +48,7 @@
 
 
 
-
+        <%=render 'spree/shared/custom/footer/footer'%>
   </div><!-- End #wrapper -->
   <!-- END -->
 
@@ -59,31 +59,7 @@
     <script src="//maps.googleapis.com/maps/api/js?sensor=false"></script>
 
     
-    <script>
-        $(function() {
-            "use strict";
-            // Slider Revolution
-            var revSliderApi = jQuery('#revslider').revolution({
-                delay:9000,
-                startwidth:870,
-                startheight:550,
-                hideTimerBar: "on",
-                spinner: "spinner5",
-                hideThumbs:0,
-                thumbWidth:60,
-                thumbHeight:38,
-                thumbAmount:3,
-                navigationType:"thumb"
-            });
-
-            jQuery('.thumb').on('click', function() {
-                setTimeout(function() {
-                    revSliderApi.revpause();
-                },500);
-                return true;
-            });
-        });
-    </script>
+    
     <%if flash_messages %>    
       <%=javascript_tag do%>
           $('#phlash').css({"display":"inline"});

@@ -1,0 +1,8 @@
+<div class="widget tagclog-widget">
+                            <h3>TagCloud</h3>
+                            <div class="tagcloud">
+                            	<%Spree::Taxon.take(12).each do |tag|%>
+                                	<a href="/t/<%=tag.permalink%>" title="<%=tag.name%>"><%=tag.name%></a>
+                                <%end%>
+                            </div><!-- End .tagcloud -->
+                        </div><!-- End .widget -->
