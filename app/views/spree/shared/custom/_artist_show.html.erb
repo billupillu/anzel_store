@@ -30,7 +30,7 @@
 <%=javascript_tag do%>
 
 $("#artistsBrief").owlCarousel({
- 
+      navigation : true,
       autoPlay: 3000, 
  
       items : 2,
@@ -38,7 +38,8 @@ $("#artistsBrief").owlCarousel({
       itemsDesktopSmall : [979,3]
  
     });
-     $('.owl-pagination').css({"display":"none"});
-   
+    $('.owl-pagination').css({"display":"none"});
+    $('#artistsBrief .owl-prev').css({"display":"none"});
+    $('#artistsBrief .owl-next').css({"display":"none"});
     
 <%end%>

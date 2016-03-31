@@ -1,0 +1,16 @@
+
+<div class="widget side-menu-container">
+                            <h3>Top Artists</h3>
+                            <div class="side-menu">
+                                <ul>
+                                	<%Spree::Taxonomy.first.taxons.order("updated_at DESC").take(10).each do |arrt|%>       
+	                                    <li>
+	                                        <a href="/t/<%=arrt.permalink%>" title="<%=arrt.name%>">
+	                                            <%=arrt.name%>
+	                                        </a>
+	                                    </li>
+	                                <%end%>   
+                                    
+                                </ul>
+                            </div><!-- End .side-menu -->
+                        </div><!-- End .widget -->

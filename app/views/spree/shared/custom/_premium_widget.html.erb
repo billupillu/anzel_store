@@ -1,0 +1,77 @@
+<%taxon=Spree::Taxon.find(44).%>
+<%premiums=Spree::Taxon.find(44).products.take(4)%>
+<% if products.any? %>
+	<div class="widget">
+        <h3>Premiums</h3>
+        <div id="tilu" class="owl-carousel specials-slider full-product-slider" style="display:inline;">
+        				<% premiums.each do |product| %>
+        					<% url = spree.product_url(product, taxon_id: 44) %>
+                                                            <div class="product product5">
+                                <% cache(taxon.present? ? [I18n.locale, current_currency, taxon, product] : [I18n.locale, current_currency, product]) do %>
+                                    <div class="product-top" style="background-color:#59b0c4;">
+                                        <figure class="product-image-container" style="width:270px;height:340px;">
+                                          
+                                              <%= link_to small_image(product, itemprop: "image",class: "product-image"), url, itemprop: 'url' %><br/>
+                                               <a href="<%=url%>" title="<%=product.name%>">
+                                              <%= small_image(product,class: "product-image-hover") %> 
+                                             <img src="<%=asset_path 'sec.png'%>" alt="<%=product.name%>" class="product-image-hover" style="opacity:0.6;"> </a> 
+                                            
+                                         
+                                        </figure>
+                                    </div>
+
+                                <div class="product-price-container text-left">
+                                    <span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                    <span class="product-price price selling lead" itemprop="price"><%= display_price(product) %></span>
+                                  </span>
+                                </div>
+                                <h3 class="product-name text-left">
+                                  <%= link_to truncate(product.name, length: 50), url, class: 'info', itemprop: "name", title: product.name %>
+                                </h3>
+
+                                <div class="product-action-container clearfix">
+                                    <a href="<%=url%>" title="Add to Cart" class="product-add-btn">
+                                        <span class="add-btn-text">Add to Cart</span>
+                                        <span class="product-btn product-cart">Cart</span>
+                                    </a>
+                                    <div class="product-action-inner">
+                                        <a href="#" title="Favorite" class="product-btn product-favorite">Favorite</a>
+                                        <a href="#" title="Compare" class="product-btn product-compare">Compare</a>
+                                    </div><!-- End .product-action-right -->
+                                </div><!-- End .product-action-container -->
+                   
+                            <% end %>
+                            </div>
+
+                    <% end %>
+                <% reset_cycle("classes") %>
+                             
+        </div><!-- End .owl-carousel -->
+    </div><!-- End .widget -->
+<%end%>                        
+
+<%=javascript_tag do%>
+
+
+   $("#tilu").owlCarousel({
+ 
+      navigation : true, // Show next and prev buttons
+      autoPlay : 3000,
+      slideSpeed : 300,
+      paginationSpeed : 500,
+      stopOnHover : true,
+      singleItem:true
+ 
+      // "singleItem:true" is a shortcut for:
+      // items : 1, 
+      // itemsDesktop : false,
+      // itemsDesktopSmall : false,
+      // itemsTablet: false,
+      // itemsMobile : false
+ 
+  });
+
+    $('.owl-pagination').css({"display":"none"});
+    $('#kk .owl-prev').css({"display":"none"});
+    $('#kk .owl-next').css({"display":"none"});
+<%end%>          
