@@ -6,5 +6,7 @@
  *= require spree/frontend
 
  *= require_self
+ *= require owl.carousel
+ *= require owl.theme
  *= require_tree .
 */

@@ -6,6 +6,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require owl.carousel
 //= require spree/frontend
 
 //= require_tree .
@@ -13,27 +14,4 @@
 
 
 	
-// $(document).ready(function(){
-	
-
-//        $("#kkkk").owlCarousel({
- 
-//       navigation : true, // Show next and prev buttons
-//       autoPlay : 3000,
-//       slideSpeed : 300,
-//       paginationSpeed : 500,
-//       stopOnHover : true,
-//       singleItem:true
- 
-//       // "singleItem:true" is a shortcut for:
-//       // items : 1, 
-//       // itemsDesktop : false,
-//       // itemsDesktopSmall : false,
-//       // itemsTablet: false,
-//       // itemsMobile : false
- 
-//   });
-
-//     $('.owl-pagination').css({"display":"none"});
-// });
 
