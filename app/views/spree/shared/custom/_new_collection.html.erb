@@ -18,12 +18,12 @@
    <%ad=Spree::Adv.last%>
 <div class="widget">
                             <div class="sidebar-banner">
-                                <img src="<%=ad.new_collection_img(:medium)%>" alt="artanzels sculptures" class="img-responsive">
+                                <img src="<%=ad.adv_img(:medium)%>" alt="artanzels sculptures" class="img-responsive">
                                 <div class="sidebar-banner-content">
                                     <div class="vcenter-container">
                                         <div class="vcenter">
-                                            <h5><span><%=ad.new_collection_h1%></span><%=ad.new_collection_h2%></h5>
-                                            <a href="/t/<%=ad.new_collection_url%>" class="btn btn-custom-7 min-width-md">Jup to the Page</a>
+                                            <h5><span><%=ad.adv_h1%></span><%=ad.adv_h2%></h5>
+                                            <a href="/t/<%=ad.adv_url%>" class="btn btn-custom-7 min-width-md">Jup to the Page</a>
                                         </div><!-- End .vcenter -->
                                     </div><!-- End .vcenter-container -->
                                 </div><!-- End .sidebar-banner-content -->
