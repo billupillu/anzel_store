@@ -2,7 +2,7 @@
 <div class="carousel-container">
                             <h2 class="carousel-title">Our Skilled Artists</h2>
                             <div class="row">
-                                <div id="artists-brief" class="owl-carousel from-theblog-carousel from-theblog-wide" style="display:inline;">
+                                <div id="artistsBrief" class="owl-carousel from-theblog-carousel from-theblog-wide" style="display:inline;">
 
                                     <%ArtistProfile.take(6).each do |artist|%>
                                         <article class="article">
@@ -28,8 +28,8 @@
                         </div><!-- End .carousel-container -->
 
 <%=javascript_tag do%>
-$(document).ready(function(){
-$("#artists-brief").owlCarousel({
+
+$("#artistsBrief").owlCarousel({
  
       autoPlay: 3000, 
  
@@ -40,5 +40,5 @@ $("#artists-brief").owlCarousel({
     });
      $('.owl-pagination').css({"display":"none"});
    
-    });
+    
 <%end%>
