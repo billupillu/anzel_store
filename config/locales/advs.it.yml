@@ -1,0 +1,15 @@
+it:
+  spree:
+    admin:
+      tab:
+        advs: "Advs"
+    new_adv: "Nuovo Adv"
+    listing_advs: "Lista Advs"
+    editing_adv: "Modifica Adv"
+  activerecord:
+    attributes:
+      spree/adv:
+        adv_h1: Adv H1
+        adv_h2: Adv H2
+        adv_url: Adv Url
+        adv_img: Adv Img

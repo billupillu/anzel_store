@@ -1,0 +1,31 @@
+<%new_coll=Spree::NewCollection.last%>
+<div class="widget">
+                            <div class="sidebar-banner">
+                                <img src="<%=new_coll.new_collection_img(:medium)%>" alt="artanzels new collection" class="img-responsive">
+                                <div class="sidebar-banner-content">
+                                    <div class="vcenter-container">
+                                        <div class="vcenter">
+                                            <h5><span><%=new_coll.new_collection_h1%></span><%=new_coll.new_collection_h2%></h5>
+                                            <a href="/t/<%=new_coll.new_collection_url%>" class="btn btn-custom-7 min-width-md">Take a Look</a>
+                                        </div><!-- End .vcenter -->
+                                    </div><!-- End .vcenter-container -->
+                                </div><!-- End .sidebar-banner-content -->
+                            </div><!-- End .sidebar-banner -->
+                        </div><!-- End .widget -->
+
+   <div class="xs-margin"></div><!-- space -->
+
+   <%ad=Spree::Adv.last%>
+<div class="widget">
+                            <div class="sidebar-banner">
+                                <img src="<%=ad.new_collection_img(:medium)%>" alt="artanzels sculptures" class="img-responsive">
+                                <div class="sidebar-banner-content">
+                                    <div class="vcenter-container">
+                                        <div class="vcenter">
+                                            <h5><span><%=ad.new_collection_h1%></span><%=ad.new_collection_h2%></h5>
+                                            <a href="/t/<%=ad.new_collection_url%>" class="btn btn-custom-7 min-width-md">Jup to the Page</a>
+                                        </div><!-- End .vcenter -->
+                                    </div><!-- End .vcenter-container -->
+                                </div><!-- End .sidebar-banner-content -->
+                            </div><!-- End .sidebar-banner -->
+                        </div><!-- End .widget -->

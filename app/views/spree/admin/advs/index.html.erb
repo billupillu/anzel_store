@@ -1,0 +1,32 @@
+<% content_for :page_title do %>
+  <%= Spree.t(:listing_advs) %>
+<% end %>
+
+<% content_for :page_actions do %>
+  <%= button_link_to Spree.t(:new_adv), new_object_url, class: 'btn-success', icon: 'add', id: 'admin_new_adv_link' %>
+<% end if can?(:create, Spree::Adv) %>
+
+<table class="table" id="listing_advs" data-hook>
+  <thead>
+    <tr data-hook="admin_advs_index_headers">
+      <th><%= t(:adv_h1, scope: 'activerecord.attributes.spree/adv') %></th>
+      <th data-hook="admin_advs_index_header_actions" class="actions"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @advs.each do |adv| %>
+      <tr id="<%= spree_dom_id adv %>" data-hook="admin_advs_index_rows" class="<%= cycle('odd', 'even')%>">
+        <td><%= link_to adv.adv_h1, edit_object_url(adv) %></td>
+        <td><%=adv.adv_h2%></td>
+        <td><%=truncate(adv.adv_url,length: 10)%></td>
+        <td><%=image_tag adv.adv_img(:thumb)%></td>
+        <td data-hook="admin_advs_index_row_actions" class="actions text-right">
+          <%= link_to_edit adv, no_text: true %>
+          <%= link_to_delete adv, no_text: true %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= paginate @advs %>

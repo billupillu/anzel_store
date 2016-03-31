@@ -1,4 +1,4 @@
-<%products=Spree::Taxon.find(44).products.take(4)%>
+<%products=Spree::Taxon.find(44).products.take(6)%>
 <% if products.any? %>
 	<div class="widget">
         <h3>Premiums</h3>
@@ -11,7 +11,9 @@
                                         <figure class="product-image-container" style="width:270px;height:340px;">
                                           
                                               <%= link_to small_image(product, itemprop: "image",class: "product-image"), url, itemprop: 'url' %><br/>
-                                              
+                                               <a href="<%=url%>" title="<%=product.name%>">
+                                              <%= small_image(product,class: "product-image-hover") %> 
+                                            	</a> 
                                             
                                          
                                         </figure>

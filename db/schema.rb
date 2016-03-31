@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160329102921) do
+ActiveRecord::Schema.define(version: 20160331113428) do
 
   create_table "artist_profiles", force: :cascade do |t|
     t.string   "a_name"
@@ -88,6 +88,18 @@ ActiveRecord::Schema.define(version: 20160329102921) do
   add_index "spree_adjustments", ["eligible"], name: "index_spree_adjustments_on_eligible"
   add_index "spree_adjustments", ["order_id"], name: "index_spree_adjustments_on_order_id"
   add_index "spree_adjustments", ["source_id", "source_type"], name: "index_spree_adjustments_on_source_id_and_source_type"
+
+  create_table "spree_advs", force: :cascade do |t|
+    t.string   "adv_h1"
+    t.string   "adv_h2"
+    t.string   "adv_url"
+    t.string   "adv_img_file_name"
+    t.string   "adv_img_content_type"
+    t.integer  "adv_img_file_size"
+    t.datetime "adv_img_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "spree_artists", force: :cascade do |t|
     t.datetime "created_at"
@@ -245,6 +257,18 @@ ActiveRecord::Schema.define(version: 20160329102921) do
   end
 
   add_index "spree_log_entries", ["source_id", "source_type"], name: "index_spree_log_entries_on_source_id_and_source_type"
+
+  create_table "spree_new_collections", force: :cascade do |t|
+    t.string   "new_collection_h1"
+    t.string   "new_collection_h2"
+    t.string   "new_collection_url"
+    t.string   "new_collection_img_file_name"
+    t.string   "new_collection_img_content_type"
+    t.integer  "new_collection_img_file_size"
+    t.datetime "new_collection_img_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "spree_newsletters", force: :cascade do |t|
     t.string   "newsletter_h1",               limit: 40

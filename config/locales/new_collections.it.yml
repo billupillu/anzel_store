@@ -1,0 +1,15 @@
+it:
+  spree:
+    admin:
+      tab:
+        new_collections: "New Collections"
+    new_new_collection: "Nuovo New Collection"
+    listing_new_collections: "Lista New Collections"
+    editing_new_collection: "Modifica New Collection"
+  activerecord:
+    attributes:
+      spree/new_collection:
+        new_collection_h1: New Collection H1
+        new_collection_h2: New Collection H2
+        new_collection_url: New Collection Url
+        new_collection_img: New Collection Img

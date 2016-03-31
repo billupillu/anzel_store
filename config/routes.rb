@@ -18,3 +18,15 @@ end
 
 
 
+
+Spree::Core::Engine.add_routes do
+  namespace :admin do
+    resources :new_collections
+  end
+end
+
+Spree::Core::Engine.add_routes do
+  namespace :admin do
+    resources :advs
+  end
+end
