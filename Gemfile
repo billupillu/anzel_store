@@ -33,3 +33,4 @@ gem 'spree_wishlist', github: 'spree-contrib/spree_wishlist', branch: '3-0-stabl
 gem 'spree_email_to_friend', github: 'spree-contrib/spree_email_to_friend', branch: '3-0-stable'
 gem 'spree_scaffold', github: 'freego/spree_scaffold', branch: '3-0-stable'	
 gem 'owlcarousel-rails'
+gem 'bxslider-rails'
