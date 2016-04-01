@@ -1,11 +1,11 @@
-<%products=Spree::Product.take(6)%>
-<%#products=Spree::Taxon.find(44).products.take(6)%>
+<%#products=Spree::Product.take(6)%>
+<%products=Spree::Taxon.find(44).products.take(6)%>
 <% if products.any? %>
 	<div class="widget">
         <h3>Premiums</h3>
-        <div id="tilu" class="owl-carousel specials-slider full-product-slider" style="display:inline;">
+        <div id="tilu" class="owl-carousel specials-slider full-product-slider"  style="display:inline;">
         				<% products.each do |product| %>
-        					<% url = spree.product_url(product, taxon_id: @taxon.try(:id)) %>
+        					<% url = spree.product_url(product, taxon_id: 44) %>
                                                             <div class="product product5">
                                 <% cache(@taxon.present? ? [I18n.locale, current_currency, @taxon, product] : [I18n.locale, current_currency, product]) do %>
                                     <div class="product-top" style="background-color:#59b0c4;">
