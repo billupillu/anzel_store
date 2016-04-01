@@ -1,0 +1,16 @@
+it:
+  spree:
+    admin:
+      tab:
+        second_slides: "Second Slides"
+    new_second_slide: "Nuovo Second Slide"
+    listing_second_slides: "Lista Second Slides"
+    editing_second_slide: "Modifica Second Slide"
+  activerecord:
+    attributes:
+      spree/second_slide:
+        h1: H1
+        h2: H2
+        p: P
+        url: Url
+        img: Img

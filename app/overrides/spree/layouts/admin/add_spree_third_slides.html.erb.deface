@@ -1,0 +1,6 @@
+<!-- insert_bottom "[data-hook='admin_tabs']" -->
+<% if can? :admin, Spree::ThirdSlide %>
+  <ul class="nav nav-sidebar">
+    <%= tab(:third_slides, icon: 'bookmark') %>
+  </ul>
+<% end %>

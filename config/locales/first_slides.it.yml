@@ -1,0 +1,16 @@
+it:
+  spree:
+    admin:
+      tab:
+        first_slides: "First Slides"
+    new_first_slide: "Nuovo First Slide"
+    listing_first_slides: "Lista First Slides"
+    editing_first_slide: "Modifica First Slide"
+  activerecord:
+    attributes:
+      spree/first_slide:
+        h1: H1
+        h2: H2
+        p: P
+        url: Url
+        img: Img

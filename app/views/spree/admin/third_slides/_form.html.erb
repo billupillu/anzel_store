@@ -1,0 +1,52 @@
+<div data-hook="admin_third_slide_form_fields" class="row">
+  <div class="col-md-6">
+    <%= f.field_container :h1, class: ['form-group'] do %>
+      <%= f.label :h1 %>
+      <%= f.text_field :h1, class: 'form-control' %>
+      <%= error_message_on :third_slide, :h1 %>
+    <% end %>
+
+    <%= f.field_container :h2, class: ['form-group'] do %>
+      <%= f.label :h2 %>
+      <%= f.text_field :h2, class: 'form-control' %>
+      <%= error_message_on :third_slide, :h2 %>
+    <% end %>
+
+    <%= f.field_container :p, class: ['form-group'] do %>
+      <%= f.label :p %>
+      <%= f.text_field :p, class: 'form-control' %>
+      <%= error_message_on :third_slide, :p %>
+    <% end %>
+
+    <%= f.field_container :url, class: ['form-group'] do %>
+      <%= f.label :url %>
+      <%= f.text_field :url, class: 'form-control' %>
+      <%= error_message_on :third_slide, :url %>
+    <% end %>
+
+    <%= f.field_container :item1_img, class: ['form-group'] do %>
+      <%= f.label :item1_img %>
+      <%= f.file_field :item1_img, class: 'form-control' %>
+      <%= error_message_on :third_slide, :item1_img %>
+    <% end %>
+
+    <%= f.field_container :item2_img, class: ['form-group'] do %>
+      <%= f.label :item2_img %>
+      <%= f.file_field :item2_img, class: 'form-control' %>
+      <%= error_message_on :third_slide, :item2_img %>
+    <% end %>
+
+    <%= f.field_container :price1, class: ['form-group'] do %>
+      <%= f.label :price1 %>
+      <%= f.text_field :price1, class: 'form-control' %>
+      <%= error_message_on :third_slide, :price1 %>
+    <% end %>
+
+    <%= f.field_container :price2, class: ['form-group'] do %>
+      <%= f.label :price2 %>
+      <%= f.text_field :price2, class: 'form-control' %>
+      <%= error_message_on :third_slide, :price2 %>
+    <% end %>
+
+  </div>
+</div>

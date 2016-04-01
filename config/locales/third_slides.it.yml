@@ -1,0 +1,19 @@
+it:
+  spree:
+    admin:
+      tab:
+        third_slides: "Third Slides"
+    new_third_slide: "Nuovo Third Slide"
+    listing_third_slides: "Lista Third Slides"
+    editing_third_slide: "Modifica Third Slide"
+  activerecord:
+    attributes:
+      spree/third_slide:
+        h1: H1
+        h2: H2
+        p: P
+        url: Url
+        item1_img: Item1 Img
+        item2_img: Item2 Img
+        price1: Price1
+        price2: Price2

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160331113428) do
+ActiveRecord::Schema.define(version: 20160401072411) do
 
   create_table "artist_profiles", force: :cascade do |t|
     t.string   "a_name"
@@ -186,6 +186,19 @@ ActiveRecord::Schema.define(version: 20160331113428) do
     t.integer  "stock_location_id"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+  end
+
+  create_table "spree_first_slides", force: :cascade do |t|
+    t.string   "h1"
+    t.string   "h2"
+    t.string   "p"
+    t.string   "url"
+    t.string   "img_file_name"
+    t.string   "img_content_type"
+    t.integer  "img_file_size"
+    t.datetime "img_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "spree_gateways", force: :cascade do |t|
@@ -703,6 +716,19 @@ ActiveRecord::Schema.define(version: 20160331113428) do
   add_index "spree_roles_users", ["role_id"], name: "index_spree_roles_users_on_role_id"
   add_index "spree_roles_users", ["user_id"], name: "index_spree_roles_users_on_user_id"
 
+  create_table "spree_second_slides", force: :cascade do |t|
+    t.string   "h1"
+    t.string   "h2"
+    t.string   "p"
+    t.string   "url"
+    t.string   "img_file_name"
+    t.string   "img_content_type"
+    t.integer  "img_file_size"
+    t.datetime "img_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "spree_shipments", force: :cascade do |t|
     t.string   "tracking"
     t.string   "number"
@@ -976,6 +1002,25 @@ ActiveRecord::Schema.define(version: 20160331113428) do
 
   add_index "spree_taxons_prototypes", ["prototype_id"], name: "index_spree_taxons_prototypes_on_prototype_id"
   add_index "spree_taxons_prototypes", ["taxon_id"], name: "index_spree_taxons_prototypes_on_taxon_id"
+
+  create_table "spree_third_slides", force: :cascade do |t|
+    t.string   "h1"
+    t.string   "h2"
+    t.string   "p"
+    t.string   "url"
+    t.string   "item1_img_file_name"
+    t.string   "item1_img_content_type"
+    t.integer  "item1_img_file_size"
+    t.datetime "item1_img_updated_at"
+    t.string   "item2_img_file_name"
+    t.string   "item2_img_content_type"
+    t.integer  "item2_img_file_size"
+    t.datetime "item2_img_updated_at"
+    t.string   "price1"
+    t.string   "price2"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "spree_trackers", force: :cascade do |t|
     t.string   "analytics_id"

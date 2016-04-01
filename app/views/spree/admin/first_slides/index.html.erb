@@ -1,0 +1,33 @@
+<% content_for :page_title do %>
+  <%= Spree.t(:listing_first_slides) %>
+<% end %>
+
+<% content_for :page_actions do %>
+  <%= button_link_to Spree.t(:new_first_slide), new_object_url, class: 'btn-success', icon: 'add', id: 'admin_new_first_slide_link' %>
+<% end if can?(:create, Spree::FirstSlide) %>
+
+<table class="table" id="listing_first_slides" data-hook>
+  <thead>
+    <tr data-hook="admin_first_slides_index_headers">
+      <th><%= t(:h1, scope: 'activerecord.attributes.spree/first_slide') %></th>
+      <th data-hook="admin_first_slides_index_header_actions" class="actions"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @first_slides.each do |first_slide| %>
+      <tr id="<%= spree_dom_id first_slide %>" data-hook="admin_first_slides_index_rows" class="<%= cycle('odd', 'even')%>">
+        <td><%= link_to first_slide.h1, edit_object_url(first_slide) %></td>
+        <td><%=first_slide.h2%></td>
+        <td><%=truncate(first_slide.p,length: 10)%></td>
+        <td><%=truncate(first_slide.url,length: 10)%></td>
+        <td><%=image_tag first_slide.img(:thumb)%></td>
+        <td data-hook="admin_first_slides_index_row_actions" class="actions text-right">
+          <%= link_to_edit first_slide, no_text: true %>
+          <%= link_to_delete first_slide, no_text: true %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= paginate @first_slides %>

@@ -30,3 +30,21 @@ Spree::Core::Engine.add_routes do
     resources :advs
   end
 end
+
+Spree::Core::Engine.add_routes do
+  namespace :admin do
+    resources :first_slides
+  end
+end
+
+Spree::Core::Engine.add_routes do
+  namespace :admin do
+    resources :second_slides
+  end
+end
+
+Spree::Core::Engine.add_routes do
+  namespace :admin do
+    resources :third_slides
+  end
+end
