@@ -1,6 +1,6 @@
 <%allT = Spree::Taxonomy.all%>
 
-<%artistsss = allT.first.taxons.all%>
+<%artistsss = allT.first.taxons.all.order("name ASC")%>
 <%tall = allT.offset(1).limit(2)%>
 <%tType = Spree::Taxonomy.find_by(position: 4)%>
 <%trest = allT.offset(4)%>

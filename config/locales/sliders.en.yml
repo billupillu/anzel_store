@@ -1,0 +1,16 @@
+en:
+  spree:
+    admin:
+      tab:
+        sliders: "Sliders"
+    new_slider: "New Slider"
+    listing_sliders: "Listing Sliders"
+    editing_slider: "Editing Slider"
+  activerecord:
+    attributes:
+      spree/slider:
+        h1: H1
+        h2: H2
+        p: P
+        url: Url
+        img: Img

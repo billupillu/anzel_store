@@ -35,8 +35,22 @@
                                         <span class="product-btn product-cart">Cart</span>
                                     </a>
                                     <div class="product-action-inner">
-                                        <a href="#" title="Favorite" class="product-btn product-favorite">Favorite</a>
-                                        <a href="#" title="Compare" class="product-btn product-compare">Compare</a>
+                                                                                <% if spree_current_user %>
+                     <%= form_for Spree::WishedProduct.new , class: "aaa" do |f| %>
+                          <%= f.hidden_field :variant_id, value: product.id %>
+                          <%= f.hidden_field :quantity %>
+                          <button id="kika" style="margin-left:-35px;background-color:#fbfaf4;box-shadow:none;" type="submit" title="add to wishlist" class="product-btn product-favorite">Add To Wishlist</button>
+                      <%end%>
+                    <%else%>
+                      <a href="/login" title="add to wishlist" class="product-btn product-favorite">Add To Wishlist</a>  
+                    <% end %>
+
+                    <% if spree_current_user %>
+                                        <a style="margin-top:-36px;" href="<%=product.images.first.attachment.url(:large)%>" data-lightbox="<%=product.name%>product<%=product.id%>" data-title="<%=product.name.upcase+" - "+display_price(product)%>" title="Quick View" class="product-btn product-compare">Quick View</a>
+
+                                        <%else%>
+                                        <a href="<%=product.images.first.attachment.url(:large)%>" data-lightbox="<%=product.name%>product<%=product.id%>" data-title="<%=product.name.upcase+" - "+display_price(product)%>" title="Quick View" class="product-btn product-compare">Quick View</a>
+                                        <%end%>
                                     </div><!-- End .product-action-right -->
                                 </div><!-- End .product-action-container -->
                    

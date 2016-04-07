@@ -1,0 +1,35 @@
+<div data-hook="admin_slider_form_fields" class="row">
+  <%=image_tag asset_path 'slides/slide.png'%>
+  <div class="col-md-6">
+    <%= f.field_container :h1, class: ['form-group'] do %>
+      <%= f.label :h1 %>
+      <%= f.text_field :h1, class: 'form-control' %>
+      <%= error_message_on :slider, :h1 %>
+    <% end %>
+
+    <%= f.field_container :h2, class: ['form-group'] do %>
+      <%= f.label :h2 %>
+      <%= f.text_field :h2, class: 'form-control' %>
+      <%= error_message_on :slider, :h2 %>
+    <% end %>
+
+    <%= f.field_container :p, class: ['form-group'] do %>
+      <%= f.label :p %>
+      <%= f.text_field :p, class: 'form-control' %>
+      <%= error_message_on :slider, :p %>
+    <% end %>
+
+    <%= f.field_container :url, class: ['form-group'] do %>
+      <%= f.label :url %>
+      <%= f.text_field :url, class: 'form-control' %>
+      <%= error_message_on :slider, :url %>
+    <% end %>
+
+    <%= f.field_container :img, class: ['form-group'] do %>
+      <%= f.label :img %>
+      <%= f.file_field :img, class: 'form-control' %>
+      <%= error_message_on :slider, :img %>
+    <% end %>
+
+  </div>
+</div>

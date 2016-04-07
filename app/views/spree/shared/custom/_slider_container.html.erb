@@ -1,77 +1,12 @@
-<%slide1=Spree::FirstSlide.last%>
-<%slide2=Spree::SecondSlide.last%>
-<%slide3=Spree::ThirdSlide.last%>
+
+
                         <div id="revslider-container">
                             <div id="revslider" >
                                 <ul>
-                                    <li data-transition="random" data-slotamount="8" data-masterspeed="800" data-title="Trends" data-thumb="<%=slide1.img(:thumb)%>">
+                                    <%Spree::Slider.take(3).each do |slider|%>
+                                    <li data-transition="random" data-slotamount="8" data-masterspeed="800" data-title="Season Sale" data-thumb="<%=slider.img(:thumb)%>">
                                         <!-- background image -->
-                                        <img src="<%=asset_path 'revslider/dummy.png'%>" style="background-color:#e5e5e5" alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
-
-                                        <div class="tp-caption rev-subtitle customin customout"
-                                            data-x="212"
-                                            data-y="163"
-                                            data-customin="x:0;y:0;z:0;rotationX:-90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-                                            data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-                                            data-speed="1000"
-                                            data-start="900"
-                                            data-easing="Power3.easeInOut"
-                                            data-endspeed="600"
-                                            style="z-index: 10"><%=slide1.h1%>
-                                        </div>
-
-                                        <div class="tp-caption rev-title customin customout"
-                                            data-x="70"
-                                            data-y="206"
-                                            data-speed="1100"
-                                            data-customin="x:0;y:0;z:0;rotationX:-90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-                                            data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-                                            data-start="1300"
-                                            data-easing="Power3.easeInOut"
-                                            data-endspeed="600"
-                                            style="z-index: 6"><%=slide1.h2.upcase%>
-                                        </div>
-
-
-                                        <div class="tp-caption rev-text customin customout"
-                                            data-x="50"
-                                            data-y="258"
-                                            data-speed ="1200"
-                                            data-customin="x:0;y:0;z:0;rotationX:-90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-                                            data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-                                            data-start="1600"
-                                            data-easing="Power3.easeInOut"
-                                            data-endspeed="600"
-                                            style="z-index: 12"> <%=slide1.p%>
-                                        </div>
-
-                                        <div class="tp-caption rev-btn customin customout"
-                                            data-x="177"
-                                            data-y="338"
-                                            data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-                                            data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-                                            data-speed="1200"
-                                            data-start="2200"
-                                            data-easing="Power3.easeInOut"
-                                            data-endspeed="600"
-                                            style="z-index: 14">
-                                                <a href="<%=slide1.url%>" class="btn btn-custom-3 btn-lg min-width">Shop Now</a>
-                                        </div>
-
-                                        <div class="tp-caption lfr ltr"
-                                            data-x="right"
-                                            data-y="-20"
-                                            data-speed="900"
-                                            data-start="1000"
-                                            data-easing="Power3.easeInOut"
-                                            data-endspeed="600"
-                                            style="z-index: 1">
-                                                <%=image_tag slide1.img(:medium), alt: slide1.h2%>
-                                        </div>
-                                    </li>
-                                    <li data-transition="random" data-slotamount="8" data-masterspeed="800" data-title="Season Sale" data-thumb="<%=slide2.img(:thumb)%>">
-                                        <!-- background image -->
-                                        <img src="<%=asset_path 'revslider/dummy.png'%>"  alt="<%=slide2.h2%>" data-lazyload="<%=slide2.img(:medium)%>" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat">
+                                        <img src="<%=asset_path 'revslider/dummy.png'%>"  alt="<%=slider.h2%>" data-lazyload="<%=slider.img(:medium)%>" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat">
 
                                         <div class="tp-caption rev-subtitle light lft ltt"
                                             data-x="center"
@@ -80,7 +15,7 @@
                                             data-start="1000"
                                             data-easing="Back.easeInOut"
                                             data-endspeed="600"
-                                            style="z-index: 10"><%=slide2.h1%>
+                                            style="z-index: 10"><%=slider.h1%>
                                         </div>
 
                                         <div class="tp-caption rev-title light sfl stl"
@@ -90,7 +25,7 @@
                                             data-start="1200"
                                             data-easing="Back.easeInOut"
                                             data-endspeed="600"
-                                            style="z-index: 8"><%=slide2.h2.upcase%>
+                                            style="z-index: 8"><%=slider.h2.upcase%>
                                         </div>
 
                                         <div class="tp-caption rev-text light sfr str"
@@ -100,7 +35,7 @@
                                             data-start="1600"
                                             data-easing="Power3.easeInOut"
                                             data-endspeed="600"
-                                            style="z-index: 12"> <%=slide2.p%>
+                                            style="z-index: 12"> <%=slider.p%>
                                         </div>
 
                                         <div class="tp-caption rev-btn lfb ltb"
@@ -111,106 +46,19 @@
                                             data-easing="Power3.easeInOut"
                                             data-endspeed="600"
                                             style="z-index: 14">
-                                                <a href="<%=slide2.url%>" class="btn btn-custom-3 light btn-lg min-width">Take Look</a>
+                                                <a href="<%=slider.url%>" class="btn btn-custom-3 light btn-lg min-width">Take Look</a>
                                         </div>
                                     </li>
-                                    <li data-transition="random" data-slotamount="8" data-masterspeed="800" data-title="Stylish" data-thumb="<%=slide3.item2_img(:thumb)%>">
-                                        <!-- background image -->
-                                        <img src="<%=asset_path 'revslider/dummy.png'%>" style="background-color:#e5e5e5" alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
-
-                                        <div class="tp-caption lfb ltt"
-                                            data-x="55"
-                                            data-y="25"
-                                            data-speed="900"
-                                            data-start="1000"
-                                            data-end="4500"
-                                            data-easing="Power3.easeInOut"
-                                            data-endspeed="500"
-                                            style="z-index: 1">
-                                                <img src="<%=slide3.item1_img(:medium)%>" alt="<%=slide3.h2%>">
-                                        </div>
-
-                                        <div class="tp-caption rev-price randomrotate randomrotateout"
-                                            data-x="340"
-                                            data-y="102"
-                                            data-speed="800"
-                                            data-start="1100"
-                                            data-end="4600"
-                                            data-easing="Power2.easeInOut"
-                                            data-endspeed="500"
-                                            style="z-index: 5">
-                                                &#x20B9;<%=slide3.price1%>
-                                        </div>
-
-
-                                        <div class="tp-caption lfb ltt"
-                                            data-x="55"
-                                            data-y="40"
-                                            data-speed="900"
-                                            data-start="5200"
-                                            data-easing="Power3.easeInOut"
-                                            data-endspeed="500"
-                                            style="z-index: 2">
-                                                <img src="<%=slide3.item2_img(:medium)%>" alt="<%=slide3.h2%>">
-                                        </div>
-
-                                        <div class="tp-caption rev-price randomrotate randomrotateout"
-                                            data-x="340"
-                                            data-y="102"
-                                            data-speed="800"
-                                            data-start="5300"
-                                            data-easing="Power2.easeInOut"
-                                            data-endspeed="500"
-                                            style="z-index: 5">
-                                                &#x20B9;<%=slide3.price2%>
-                                        </div>
-                                        
-                                        <div class="tp-caption rev-subtitle lft ltt"
-                                            data-x="582"
-                                            data-y="163"
-                                            data-speed="1000"
-                                            data-start="1000"
-                                            data-easing="Back.easeInOut"
-                                            data-endspeed="600"
-                                            style="z-index: 10"><%=slide3.h1%>
-                                        </div>
-
-                                        <div class="tp-caption rev-title ralign sfl stl"
-                                            data-x="464"
-                                            data-y="206"
-                                            data-speed="1200"
-                                            data-start="1200"
-                                            data-easing="Back.easeInOut"
-                                            data-endspeed="600"
-                                            style="z-index: 8"><%=slide3.h2.upcase%>
-                                        </div>
-
-                                        <div class="tp-caption rev-text ralign short sfr str"
-                                            data-x="426"
-                                            data-y="258"
-                                            data-speed ="1200"
-                                            data-start="1600"
-                                            data-easing="Power3.easeInOut"
-                                            data-endspeed="600"
-                                            style="z-index: 12"><%=slide3.p%>
-                                        </div>
-
-                                        <div class="tp-caption rev-btn ralign lfb ltb"
-                                            data-x="542"
-                                            data-y="338"
-                                            data-speed="1100"
-                                            data-start="1800"
-                                            data-easing="Power3.easeInOut"
-                                            data-endspeed="600"
-                                            style="z-index: 14">
-                                                <a href="<%=slide3.url%>" class="btn btn-custom-3 dark btn-lg min-width">SHOP NOW</a>
-                                        </div>
-                                    </li>
+                                    <%end%>
+                                    
                                 </ul>
                             </div><!-- End #revslider -->
                         </div><!-- End #revslider-container -->
 
 <%=javascript_tag do%>
+$('#revslider .tp-leftarrow').hide();
+$('#revslider .tp-rightarrow').hide();
+
  $(function() {
             "use strict";
             // Slider Revolution
@@ -224,7 +72,11 @@
                 thumbWidth:60,
                 thumbHeight:38,
                 thumbAmount:3,
-                navigationType:"thumb"
+                navigationType:"thumb",
+                navigationArrows:"solo",
+                navigationHAlign:"center",
+                soloArrowLeftHOffset:20,     // offset position from aligned position
+                    soloArrowLeftVOffset:20
             });
 
             jQuery('.thumb').on('click', function() {

@@ -1,0 +1,37 @@
+<% content_for :page_title do %>
+  <%= Spree.t(:listing_sliders) %>
+<% end %>
+
+<% content_for :page_actions do %>
+  <%= button_link_to Spree.t(:new_slider), new_object_url, class: 'btn-success', icon: 'add', id: 'admin_new_slider_link' %>
+<% end if can?(:create, Spree::Slider) %>
+
+<table class="table" id="listing_sliders" data-hook>
+  <thead>
+    <tr data-hook="admin_sliders_index_headers">
+      <th><%= t(:h1, scope: 'activerecord.attributes.spree/slider') %></th>
+      <th>Second Heading</th>
+      <th>Paragraph</th>
+      <th>URL</th>
+      <th>Image</th>
+      <th data-hook="admin_sliders_index_header_actions" class="actions"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @sliders.each do |slider| %>
+      <tr id="<%= spree_dom_id slider %>" data-hook="admin_sliders_index_rows" class="<%= cycle('odd', 'even')%>">
+        <td><%= link_to slider.h1, edit_object_url(slider) %></td>
+        <td><%=slider.h2%></td>
+        <td><%=slider.p%></td>
+        <td><%=truncate(slider.url,length: 10)%></td>
+        <td><%=image_tag slider.img(:thumb)%></td>
+        <td data-hook="admin_sliders_index_row_actions" class="actions text-right">
+          <%= link_to_edit slider, no_text: true %>
+          <%= link_to_delete slider, no_text: true %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= paginate @sliders %>
