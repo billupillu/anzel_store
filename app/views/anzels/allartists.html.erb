@@ -1,0 +1,18 @@
+<div class="container-fluidl">
+	<div class="materialHeader">
+		<h2 style="color:#fff;">Art Anzels All Artists </h2>
+	</div>
+	<div class="contentMaterial">
+			<%Spree::Taxonomy.find(2).taxons.all.order("name ASC").each do |taxon|%>
+				<a href="/t/<%=taxon.permalink%>" style="text-decoration:none;">
+					<div class="subjectMaterial">
+						<h4 style=""><%=taxon.name.upcase%></h4>
+					</div>
+				</a>
+			<%end%>
+	</div>
+</div>
+<%=javascript_tag do%>
+		
+	 $(".subjectMaterial").hover(function(){ $(this).toggleClass('cn'); });
+<%end%>

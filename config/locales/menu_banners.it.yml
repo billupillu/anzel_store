@@ -1,0 +1,16 @@
+it:
+  spree:
+    admin:
+      tab:
+        menu_banners: "Menu Banners"
+    new_menu_banner: "Nuovo Menu Banner"
+    listing_menu_banners: "Lista Menu Banners"
+    editing_menu_banner: "Modifica Menu Banner"
+  activerecord:
+    attributes:
+      spree/menu_banner:
+        h1: H1
+        h2: H2
+        p: P
+        url: Url
+        img: Img

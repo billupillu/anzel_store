@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160407074950) do
+ActiveRecord::Schema.define(version: 20160411073233) do
 
   create_table "artist_profiles", force: :cascade do |t|
     t.string   "a_name"
@@ -257,6 +257,19 @@ ActiveRecord::Schema.define(version: 20160407074950) do
   end
 
   add_index "spree_log_entries", ["source_id", "source_type"], name: "index_spree_log_entries_on_source_id_and_source_type"
+
+  create_table "spree_menu_banners", force: :cascade do |t|
+    t.string   "h1"
+    t.string   "h2"
+    t.string   "p"
+    t.string   "url"
+    t.string   "img_file_name"
+    t.string   "img_content_type"
+    t.integer  "img_file_size"
+    t.datetime "img_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "spree_new_collections", force: :cascade do |t|
     t.string   "new_collection_h1"

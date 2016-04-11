@@ -34,3 +34,4 @@ gem 'spree_email_to_friend', github: 'spree-contrib/spree_email_to_friend', bran
 gem 'spree_scaffold', github: 'freego/spree_scaffold', branch: '3-0-stable'	
 gem 'owlcarousel-rails'
 gem 'bxslider-rails'
+gem 'bootstrap-material-design'

@@ -1,0 +1,61 @@
+.container-fluidl{
+	margin-top: 0px !important;
+	background-color: #eeeeee !important;
+	width: 100vw !important;
+	height: 100vh !important;
+	position: relative !important;
+	padding: 0px !important;
+	padding-top: 0px !important;
+	.materialHeader{
+		position: fixed;
+		background-color: #009587;
+	      -webkit-box-shadow: 0 8px 6px -6px #3a3d41;
+       -moz-box-shadow: 0 8px 6px -6px #3a3d41;
+            box-shadow: 0 8px 6px -6px #3a3d41;
+        color:#ffffff;
+        padding-top: 30px;
+        padding-left: 30px;
+        margin-top: -2.7%;
+        margin-left: 0px;
+        width: 100vw;
+        height: 14vh;     
+	}
+}
+.contentMaterial{position: relative;
+					width: 100vw;
+					padding: 100px;
+
+					}
+
+.subjectMaterial{
+		
+		float: left;
+		margin-left: 40px;
+		margin-top: 30px;
+		background-color: #ffffff;
+		color: #009587;
+		height: 60px;
+		padding-top:20px;padding-left: 10px;padding-right: 10px;text-align: center;
+		border-top:3px solid #009587; 
+		transition: all 0.3s ease-in-out;
+}
+
+.materialCircle{
+	width: 80px;height: 80px;
+	border-radius: 100%;
+	background-color: #009587;
+	
+	float: right;
+	margin-top: -2.7%;
+	 -moz-box-shadow: 3px 3px 4px #3a3d41; 
+ -webkit-box-shadow: 3px 3px 4px #3a3d41; 
+ box-shadow: 3px 3px 4px #3a3d41; 
+}
+
+
+.cn{
+	transition: all 0.3s ease-in-out;
+ -moz-box-shadow: 3px 3px 4px #3a3d41; 
+ -webkit-box-shadow: 3px 3px 4px #3a3d41; 
+ box-shadow: 3px 3px 4px #3a3d41; 
+}

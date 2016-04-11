@@ -1,0 +1,33 @@
+<% content_for :page_title do %>
+  <%= Spree.t(:listing_menu_banners) %>
+<% end %>
+
+<% content_for :page_actions do %>
+  <%= button_link_to Spree.t(:new_menu_banner), new_object_url, class: 'btn-success', icon: 'add', id: 'admin_new_menu_banner_link' %>
+<% end if can?(:create, Spree::MenuBanner) %>
+
+<table class="table" id="listing_menu_banners" data-hook>
+  <thead>
+    <tr data-hook="admin_menu_banners_index_headers">
+      <th><%= t(:h1, scope: 'activerecord.attributes.spree/menu_banner') %></th>
+      <th data-hook="admin_menu_banners_index_header_actions" class="actions"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @menu_banners.each do |menu_banner| %>
+      <tr id="<%= spree_dom_id menu_banner %>" data-hook="admin_menu_banners_index_rows" class="<%= cycle('odd', 'even')%>">
+        <td><%= link_to menu_banner.h1, edit_object_url(menu_banner) %></td>
+        <td><%=menu_banner.h2%></td>
+        <td><%=menu_banner.p%></td>
+        <td><%=truncate(menu_banner.url,length: 10)%></td>
+        <td><%=image_tag menu_banner.img(:thumb)%></td>
+        <td data-hook="admin_menu_banners_index_row_actions" class="actions text-right">
+          <%= link_to_edit menu_banner, no_text: true %>
+          <%= link_to_delete menu_banner, no_text: true %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= paginate @menu_banners %>

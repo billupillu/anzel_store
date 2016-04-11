@@ -5,6 +5,7 @@
 // the compiled file.
 //
 //= require jquery
+//= require bootstrap-material-design
 //= require jquery_ujs
 //= require owl.carousel
 //= require bxslider

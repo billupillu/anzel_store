@@ -1,10 +1,12 @@
+
 <!--granda--><style type="text/css">.header4 .search-form input{width: 240px;} select.form-control{appearance:none;
     -moz-appearance:none; /* Firefox */
-    -webkit-appearance:none; /* Safari and Chrome */ }</style>
+    -webkit-appearance:none; /* Safari and Chrome */ 
+    border: 1px solid #ecebe1 !important;height: 36px;}</style>
 
 <div class="container header-inside" data-hook>
                 <div class="row">
-                    <div class="col-sm-12 clearfix">
+                    <div class="col-sm-12 clearfix" id="headerkiid">
                         <div class="logo-container" >
                             <h1 class="logo clearfix" data-hook>
                                 <a href="<%=spree.root_path%>" title="Art Anzels Premium Paintings Online"> <%=image_tag 'logo.png'%></a>
@@ -25,7 +27,7 @@
                             </div><!-- End .cart-dropdown -->
                             <div class="search-container">
                                   <% cache(cache_key_for_taxons) do %>
-                                     <%= select_tag :taxon, options_for_select([[Spree.t(:all_departments), '']] + @taxons.map {|t| [t.name, t.id]},
+                                     <%= select_tag :taxon, options_for_select([[Spree.t(:whole_gallery), '']] + @taxons.map {|t| [t.name, t.id]},
                                      @taxon ? @taxon.id : params[:taxon]), 'aria-label' => 'Taxon', class: "form-control" %>
                                   <% end %>
                             </div><!-- End .search-container -->

@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  get 'anzels/index'
+  get 'anzels/medium'
+  get 'anzels/allartists'
   resources :testimonials
   resources :artist_profiles,except: [:index]
  
@@ -13,26 +16,17 @@ Spree::Core::Engine.add_routes do
     resources :newsletters
     resources :infos
     resources :artists
-  end
-end
-
-
-
-
-Spree::Core::Engine.add_routes do
-  namespace :admin do
     resources :new_collections
-  end
-end
-
-Spree::Core::Engine.add_routes do
-  namespace :admin do
     resources :advs
+    resources :sliders
   end
 end
 
+
+
+
 Spree::Core::Engine.add_routes do
   namespace :admin do
-    resources :sliders
+    resources :menu_banners
   end
 end

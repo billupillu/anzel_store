@@ -9,6 +9,7 @@
  *= require owl.carousel
  *= require owl.theme
  *= require bxslider
+ *= require bootstrap-material-design
  *= require_tree .
 */
 
@@ -223,3 +224,37 @@ body.lb-disable-scrolling {
 
 #kika:hover{background-color: #cbc6b5 !important;}
 .tparrows {display:none !important;}.tparrows:hover {display:none !important;}.tparrows:before {display:none !important;}
+
+#hojastick{transition: all 0.4s ease;position: static;}
+
+#hojastick.sticky {
+ position: fixed;
+ margin-top: -159px;
+ z-index:3000;
+ background-color: #f7f6f0;
+ width: 100%;
+ padding-left: 6.6%;padding-right: 6.5%;
+ border:1px solid #726c61;
+ /* font-size: 24px;
+  line-height: 48px;
+  height: 48px;
+  background: #efc47D;
+  text-align: left;
+  padding-left: 20px;*/
+  -webkit-box-shadow: 0 8px 6px -6px #726c61;
+       -moz-box-shadow: 0 8px 6px -6px #726c61;
+            box-shadow: 0 8px 6px -6px #726c61;
+  transition: all 0.4s ease;
+}
+
+.bdr{border: none !important;}
+.abdr{border-left:1px solid #726c61 !important; transition: all 0.4s ease;}
+.abdrlast{border-right:1px solid #726c61 !important; }.abdrcart{border-right:1px solid #726c61 !important;border-left:1px solid #726c61 !important; }
+/*.abdr:hover{background-color: #e61446 !important;}*/
+
+
+
+.btn-success{background-color: #6fc4a7 !important;border: none !important;transition: all 0.4s ease;}
+.btn-success:hover{-webkit-box-shadow: 0 8px 6px -6px #726c61 !important;
+       -moz-box-shadow: 0 8px 6px -6px #726c61 !important;
+            box-shadow: 0 8px 6px -6px #726c61 !important;}

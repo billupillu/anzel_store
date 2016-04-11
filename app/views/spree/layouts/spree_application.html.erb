@@ -15,8 +15,9 @@
   <%else%>
   <%end%>
     <div id="wrapper">
+
         <%= render partial: 'spree/shared/google_analytics.js' %>
-        <div id="sticky-header" class="header4 light boxed-menu" data-fixed="fixed"></div><!-- End #sticky-header -->
+        <!-- <div id="sticky-header" class="header4 light boxed-menu" data-fixed="fixed"></div> -->
         
         <header id="header" class="header4 boxed-menu light" data-hook>
             <%=render 'spree/shared/custom/header_top'%>  
@@ -74,5 +75,32 @@
     <%end%>
 
     <%=render 'spree/shared/custom/footer/light'%>
+
+    <!--hojastick-->
+      <%=javascript_tag do%>
+        $(window).scroll(function() {
+        if ($(this).scrollTop() > 149){  
+          $('#hojastick').addClass("sticky");
+          $('#main-nav').addClass("bdr");
+          $('#a1').addClass("abdr");$('#a5').addClass("abdrlast");$('#a6').addClass("abdrcart");
+
+        }
+        else{
+          $('#hojastick').removeClass("sticky");
+          $('#main-nav').removeClass("bdr");
+          $('#a1').removeClass("abdr");$('#a5').removeClass("abdrlast");$('#a6').removeClass("abdrcart");
+        }
+      });
+      <%end%>
+<%=javascript_tag do%>
+
+$('#firstmenu').hover(function() {
+  $('#firstmenu').stop(true).addClass("active");
+}, function() {
+  $('#firstmenu').stop(true).removeClass("active");
+});
+ 
+<%end%>
+<%=render 'spree/shared/custom/mainjs'%>
   </body>
 </html>
