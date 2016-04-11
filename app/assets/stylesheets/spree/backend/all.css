@@ -12,7 +12,7 @@
 
 .btn-success{background-color: #e61446 !important;border-color:#e61446 !important;transition:all 0.4s linear !important; }
 
-.btn-success:hover{color:#726c61;background-color: #fbfaf4 !important;}
+.btn-success:hover{color:#726c61 !important;background-color: #fbfaf4 !important;}
 .navbar .row {background-color: #59b0c4;border-color: #59b0c4;-webkit-box-shadow: 0px 0px 8px 2px #7f7b73;
        -moz-box-shadow: 0px 0px 8px 2px #7f7b73;
             box-shadow: 0px 0px 8px 2px #7f7b73;}
