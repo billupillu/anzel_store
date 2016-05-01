@@ -1,0 +1,11 @@
+<h3>in order toput text on next lene just add '*' (without quotes)</h3>
+<div data-hook="admin_return_policy_form_fields" class="row">
+  <div class="col-md-6">
+    <%= f.field_container :content, class: ['form-group'] do %>
+      <%= f.label :content %>
+      <%= f.text_area :content, class: 'form-control' ,rows: 10%>
+      <%= error_message_on :return_policy, :content %>
+    <% end %>
+
+  </div>
+</div>

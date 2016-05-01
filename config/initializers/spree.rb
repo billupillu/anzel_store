@@ -19,8 +19,8 @@ Spree.config do |config|
   styles:      {
                  mini:   "60x76#",
                  small:  "270x340#",
-                 product:"670x844#",
-                 large:  "700x881>"
+                 product:"500x630#",
+                 large:  "1000x1260>"
                },
   path:        "/spree/:class/:id/:style/:basename.:extension",
   default_url: "/spree/products/:id/:style/:basename.:extension",
@@ -31,9 +31,12 @@ Spree.config do |config|
   end
 end
 
+
+#Spree::PermittedAttributes.user_attributes.push :name
   
     
-
+#1000x1260>
+#500x630#
 
 
 

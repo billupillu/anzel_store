@@ -1,0 +1,38 @@
+<% content_for :page_title do %>
+  <%= Spree.t(:listing_return_policies) %>
+<% end %>
+
+<% content_for :page_actions do %>
+  <%= button_link_to Spree.t(:new_return_policy), new_object_url, class: 'btn-success', icon: 'add', id: 'admin_new_return_policy_link' %>
+<% end if can?(:create, Spree::ReturnPolicy) %>
+
+<h1><%= t(:content, scope: 'activerecord.attributes.spree/return_policy') %>
+      </h1>
+          
+
+<%ct=1%>
+<% @return_policies.each do |return_policy| %>
+    <%if ct==1%>
+      <div class="panel panel-info" >
+      <%else%>
+      <div class="panel panel-warning" >
+    <%end%>
+
+          <div class="panel-heading">
+            <h3>Return Policy (Added at <%=return_policy.created_at.strftime("%B %-d, %Y")%>)</h3>
+            <div data-hook="admin_return_policies_index_row_actions" class="actions text-right">
+              <h2><%= link_to_edit return_policy, no_text: true %><%= link_to_delete return_policy, no_text: true %></h2>
+            </div>
+          </div>
+          <div class="panel-body"><p><%=return_policy.content%></p>
+            <h5>(Updated at <%=return_policy.updated_at.strftime("%B %-d, %Y")%>)</h5>
+          </div>
+      </div>
+
+        <%if ct==2%>
+          <%ct=1%>
+        <%else%>  
+          <%ct=2%>
+        <%end%>
+        <br>
+<%end%> 

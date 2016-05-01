@@ -6,11 +6,13 @@ module Spree
     rescue_from ActiveRecord::RecordNotFound, :with => :render_404
     helper 'spree/taxons'
 
-    respond_to :html
+     respond_to :html
+      
 
     def index
       @searcher = build_searcher(params.merge(include_images: true))
       @products = @searcher.retrieve_products
+      #@products = @searcher.retrieve_products.price_between(params[:minprice], params[:maxprice]) if params.key?(:minprice) && params.key?(:maxprice)
       @taxonomies = Spree::Taxonomy.includes(root: :children)
     end
 

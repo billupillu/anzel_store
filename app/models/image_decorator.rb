@@ -7,7 +7,7 @@ Spree::Image.class_eval do
   },
     :mini => '60x76#', # thumbs under image
     :small => '270x340#', # images on category view
-    :product => '670x844#', # full product image
-    :large => '700x881>' # light box image
+    :product => '500x630#', # full product image
+    :large => '1000x1260>' # light box image
   }
 end

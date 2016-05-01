@@ -11,7 +11,9 @@ module Spree
 
       @searcher = build_searcher(params.merge(taxon: @taxon.id, include_images: true))
       @products = @searcher.retrieve_products
+      #@products = @searcher.retrieve_products.price_between(params[:minprice], params[:maxprice]) if params.key?(:minprice) && params.key?(:maxprice)
       @taxonomies = Spree::Taxonomy.includes(root: :children)
+
     end
 
     private

@@ -3,7 +3,7 @@
 		<h2 style="color:#fff;">Art Anzels All Themes</h2>
 		<div class="materialCircle"></div><div class="materialCircle"></div><div class="materialCircle"></div><div class="materialCircle"></div>
 	</div>
-	<div class="contentMaterial">
+	<div style="margin-bottom:5%;" class="contentMaterial">
 			<%Spree::Taxonomy.find(7).taxons.all.each do |taxon|%>
 				<a href="/t/<%=taxon.permalink%>" style="text-decoration:none;">
 					<div class="subjectMaterial">

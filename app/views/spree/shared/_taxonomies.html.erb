@@ -1,10 +1,17 @@
+<%tarray = [7,8,3,4]%>
+<%b="#3ebcd2"%>
+<%p="#c477c9"%>
 <% max_level = Spree::Config[:max_level_in_taxons_menu] || 1 %>
+<%count=1%>
+<%tarray.each do |i|%>
+	<nav id="taxonomies" class="sidebar-item" data-hook>
+		<% taxonomy = @taxonomies.find(i)%>
+			<% cache [I18n.locale, taxonomy, max_level, @taxon] do %>
+				<%if count==1%><%c=b%><%else%><%c=p%><%end%>
+		      <h6 class='taxonomy-root' style="color: <%=c%>;background-color:#efeee2;padding:7px;"><%= Spree.t(:art_by_taxonomy, :taxonomy => taxonomy.name) %></h6>
+		      <%= taxons_tree(taxonomy.root, @taxon, max_level) %>
+		    <% end %>
+		    <%if count==1%><%count=2%><%else%><%count=1%><%end%>		
+	</nav>
+<%end%>
 
-<nav id="taxonomies" class="sidebar-item" data-hook>
-  <% @taxonomies.each do |taxonomy| %>
-    <% cache [I18n.locale, taxonomy, max_level, @taxon] do %>
-      <h4 class='taxonomy-root'><%= Spree.t(:shop_by_taxonomy, :taxonomy => taxonomy.name) %></h4>
-      <%= taxons_tree(taxonomy.root, @taxon, max_level) %>
-    <% end %>
-  <% end %>
-</nav>

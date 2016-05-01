@@ -1,0 +1,6 @@
+<%sleep 1%>
+$("#home-products .page").append("<%= j render :partial => 'spree/shared/products', :locals => { :products => @products, :taxon => @taxon } %>");
+
+
+
+

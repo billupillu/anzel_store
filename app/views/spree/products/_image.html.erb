@@ -1,5 +1,12 @@
+<div class="wallBorder" style="cursor: pointer; cursor: hand;padding:0; border:40px solid transparent;">
+<a href="<%=@product.images.first.attachment.url(:large)%>" data-lightbox="<%=@product.name%>product<%=@product.id%>" data-title="<%=@product.name.upcase+" - "+display_price(@product)%>" title="Click to enlarge">
+
 <% if defined?(image) && image %>
   <%= image_tag image.attachment.url(:product), :itemprop => "image" %>
 <% else %>
   <%= product_image(@product, :itemprop => "image") %>
 <% end %>
+</a>
+
+</div>
+

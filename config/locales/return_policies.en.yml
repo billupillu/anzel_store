@@ -1,0 +1,12 @@
+en:
+  spree:
+    admin:
+      tab:
+        return_policies: "ReturnPolicies"
+    new_return_policy: "New ReturnPolicy"
+    listing_return_policies: "Listing ReturnPolicies"
+    editing_return_policy: "Editing ReturnPolicy"
+  activerecord:
+    attributes:
+      spree/return_policy:
+        content: Content

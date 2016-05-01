@@ -30,3 +30,9 @@ Spree::Core::Engine.add_routes do
     resources :menu_banners
   end
 end
+
+Spree::Core::Engine.add_routes do
+  namespace :admin do
+    resources :return_policies
+  end
+end

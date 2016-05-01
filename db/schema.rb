@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160411073233) do
+ActiveRecord::Schema.define(version: 20160427130735) do
 
   create_table "artist_profiles", force: :cascade do |t|
     t.string   "a_name"
@@ -478,7 +478,7 @@ ActiveRecord::Schema.define(version: 20160411073233) do
   add_index "spree_product_properties", ["property_id"], name: "index_spree_product_properties_on_property_id"
 
   create_table "spree_products", force: :cascade do |t|
-    t.string   "name",                 default: "",   null: false
+    t.string   "name",                            default: "",                                        null: false
     t.text     "description"
     t.datetime "available_on"
     t.datetime "deleted_at"
@@ -487,10 +487,12 @@ ActiveRecord::Schema.define(version: 20160411073233) do
     t.string   "meta_keywords"
     t.integer  "tax_category_id"
     t.integer  "shipping_category_id"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-    t.boolean  "promotionable",        default: true
+    t.datetime "created_at",                                                                          null: false
+    t.datetime "updated_at",                                                                          null: false
+    t.boolean  "promotionable",                   default: true
     t.string   "meta_title"
+    t.string   "quality",              limit: 60, default: "100% Orignal, handpainted by the Artist", null: false
+    t.boolean  "authenticity_letter",             default: true,                                      null: false
   end
 
   add_index "spree_products", ["available_on"], name: "index_spree_products_on_available_on"
@@ -703,6 +705,12 @@ ActiveRecord::Schema.define(version: 20160411073233) do
 
   add_index "spree_return_items", ["customer_return_id"], name: "index_return_items_on_customer_return_id"
   add_index "spree_return_items", ["exchange_inventory_unit_id"], name: "index_spree_return_items_on_exchange_inventory_unit_id"
+
+  create_table "spree_return_policies", force: :cascade do |t|
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "spree_roles", force: :cascade do |t|
     t.string "name"
