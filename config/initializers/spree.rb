@@ -1,7 +1,7 @@
 
 #--------------------------------------------
 Spree.config do |config|
-  config.admin_interface_logo = "logo.png"
+  config.admin_interface_logo = "artanzels.png"
   
 
   attachment_config={
